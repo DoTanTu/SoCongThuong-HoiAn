@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Roboto', sans-serif, arial;
+    src: url(../fonts/roboto-black-webfont.woff2) format('woff2'),
+         url(../fonts/roboto-black-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'Roboto', sans-serif, arial;
+    src: url(../fonts/roboto-blackitalic-webfont.woff2) format('woff2'),
+         url(../fonts/roboto-blackitalic-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'Roboto', sans-serif, arial;
+    src: url(../fonts/roboto-bold-webfont.woff2) format('woff2'),
+         url(../fonts/roboto-bold-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'Roboto', sans-serif, arial;
+    src: url(../fonts/roboto-bolditalic-webfont.woff2) format('woff2'),
+         url(../fonts/roboto-bolditalic-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'Roboto', sans-serif, arial;
+    src: url(../fonts/roboto-italic-webfont.woff2) format('woff2'),
+         url(../fonts/roboto-italic-webfont.woff2) format('woff');
+}
+@font-face {
+    font-family: 'Roboto', sans-serif, arial;
+    src: url(../fonts/roboto-light-webfont.woff2) format('woff2'),
+         url(../fonts/roboto-light-webfont.woff) format('woff');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --txt-main-color: #000000;
+}
+body {
+    font-family: 'Roboto', sans-serif, arial;
+    font-size: 16px;
+    line-height: 1.42857143;
+    font-weight: 400;
+    color: var(--txt-main-color);
+    background-color: var(--white-color);
+}
