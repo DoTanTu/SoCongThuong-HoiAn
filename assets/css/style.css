@@ -1,45 +1,180 @@
 @font-face {
     font-family: 'Roboto', sans-serif, arial;
     src: url(../fonts/roboto-black-webfont.woff2) format('woff2'),
-         url(../fonts/roboto-black-webfont.woff) format('woff');
+        url(../fonts/roboto-black-webfont.woff) format('woff');
 }
+
 @font-face {
     font-family: 'Roboto', sans-serif, arial;
     src: url(../fonts/roboto-blackitalic-webfont.woff2) format('woff2'),
-         url(../fonts/roboto-blackitalic-webfont.woff) format('woff');
+        url(../fonts/roboto-blackitalic-webfont.woff) format('woff');
 }
+
 @font-face {
     font-family: 'Roboto', sans-serif, arial;
     src: url(../fonts/roboto-bold-webfont.woff2) format('woff2'),
-         url(../fonts/roboto-bold-webfont.woff) format('woff');
+        url(../fonts/roboto-bold-webfont.woff) format('woff');
 }
+
 @font-face {
     font-family: 'Roboto', sans-serif, arial;
     src: url(../fonts/roboto-bolditalic-webfont.woff2) format('woff2'),
-         url(../fonts/roboto-bolditalic-webfont.woff) format('woff');
+        url(../fonts/roboto-bolditalic-webfont.woff) format('woff');
 }
+
 @font-face {
     font-family: 'Roboto', sans-serif, arial;
     src: url(../fonts/roboto-italic-webfont.woff2) format('woff2'),
-         url(../fonts/roboto-italic-webfont.woff2) format('woff');
+        url(../fonts/roboto-italic-webfont.woff2) format('woff');
 }
+
 @font-face {
     font-family: 'Roboto', sans-serif, arial;
     src: url(../fonts/roboto-light-webfont.woff2) format('woff2'),
-         url(../fonts/roboto-light-webfont.woff) format('woff');
+        url(../fonts/roboto-light-webfont.woff) format('woff');
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --txt-main-color: #000000;
+    --txt-header-color: #ffff;
+    --txt-navbar-checked-color: #ffff00;
+    --background-color: #ffff;
 }
+
 body {
     font-family: 'Roboto', sans-serif, arial;
     font-size: 16px;
     line-height: 1.42857143;
     font-weight: 400;
     color: var(--txt-main-color);
+}
+
+.header-banner {
+    background-image: url("../img/header-banner.jpg");
+    height: 124px;
+}
+
+nav {
+    color: var(--txt-header-color);
+    font-weight: bold;
+    background-color: crimson;
+    height: auto;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    margin: 0px 30px 0px 10px;
+    padding: 2px 5px 2px 5px;
+    justify-content: space-between;
+}
+
+nav ul li {
+    list-style-type: none;
+}
+
+.navbar__item__active {
+    color: var(--txt-navbar-checked-color);
+}
+
+.navbar__item:hover {
+    color: var(--txt-navbar-checked-color);
+    cursor: pointer;
+}
+
+.footer__header {
+    display: flex;
+    color: var(--txt-header-color);
+    background-color: crimson;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer__header * {
+    margin: 0;
+    padding: 0;
+}
+
+.footer__header .footer__header__link {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: var(--txt-header-color);
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--txt-header-color);
+}
+
+.footer__body {
+    display: flex;
+    background-color: var(--background-color);
+    min-height: 300px;
+    margin-left: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__body__left {
+    display: block;
+    min-width: 60%;
+    max-width: 80%;
+    text-align: center;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.footer__body__left * {
+    margin: 0px 20px 0px 20px;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.footer__body_right {
+    display: block;
+    min-width: 20%;
+    max-width: 50%;
+    margin: 10px;
+    font-weight: bold;
+    text-align: center;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.footer__body_left__contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer__body_left__contact-info * {
+    margin: 0px 5px 0px 5px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer__body_left__title {
+    font-weight: bold;
+    margin: 0;
+}
+
+main {
+    min-height: 100vh;
+    margin: 0 auto;
 }
