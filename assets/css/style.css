@@ -1,3 +1,5 @@
+
+/*---------------- LIBRARY FONT ----------------*/
 @font-face {
     font-family: 'Roboto', sans-serif, arial;
     src: url(../fonts/roboto-black-webfont.woff2) format('woff2'),
@@ -41,29 +43,43 @@
 }
 
 :root {
-    --txt-main-color: #000000;
+    --txt-main-color: #212529;
+    --txt-color-black: #000000;
+    --txt-light-black: #333333;
+    --txt-much-gray:#6C757D;
     --txt-header-color: #ffff;
     --txt-navbar-checked-color: #ffff00;
     --background-color: #ffff;
+    --bg-color-red:#DD0F0F;
+    --bg-color-gray:#E9ECEF;
+    --bg-color-main-gray:#f4f5f6;
 }
 
 body {
     font-family: 'Roboto', sans-serif, arial;
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1.4;
     line-height: 1.42857143;
     font-weight: 400;
     color: var(--txt-main-color);
 }
 
+.container{
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+
+/*---------------- HEADER ----------------*/
 .header-banner {
     background-image: url("../img/header-banner.jpg");
     height: 124px;
 }
 
-nav {
+.navbar__web nav {
     color: var(--txt-header-color);
     font-weight: bold;
-    background-color: crimson;
+    background-color: var(--bg-color-red);
     height: auto;
     padding: 5px;
     align-items: center;
@@ -91,10 +107,11 @@ nav ul li {
     cursor: pointer;
 }
 
+/*---------------- FOOTER ----------------*/
 .footer__header {
     display: flex;
     color: var(--txt-header-color);
-    background-color: crimson;
+    background-color: var(--bg-color-red);
     height: auto;
     align-items: center;
     justify-content: center;
@@ -174,7 +191,36 @@ a:hover {
     margin: 0;
 }
 
-main {
-    min-height: 100vh;
-    margin: 0 auto;
+main{
+    background-color: var(--bg-color-main-gray);
+}
+.left_about{
+    background-color: var(--txt-header-color);
+}
+/*---------------- ABOUT ----------------*/
+.about__main{
+    padding: 10px 0;
+}
+.left_about .breadcrumb{
+    padding: 0.75rem 1rem;
+    background-color: var(--bg-color-gray);
+}
+.breadcrumb-item, .breadcrumb-item a{
+    color: var(--txt-light-black);
+}
+.breadcrumb-item + .breadcrumb-item{
+    padding-left: 0.5rem;
+}
+.breadcrumb-item.active a{
+    color: var(--txt-much-gray);
+}
+
+
+
+
+/*---------------- RESPONSE ----------------*/
+@media screen and (min-width: 1200px) {
+    body.af_document .container, body.af_document .container-lg, body.af_document .container-md, body.af_document .container-sm, body.af_document .container-xl, body div.container, body div.container-lg, body div.container-md, body div.container-sm, body div.container-xl{
+        max-width: 1140px !important;
+    }
 }
