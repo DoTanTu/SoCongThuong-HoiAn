@@ -1,11 +1,12 @@
 $(document).ready(function () {
-    actionContrast();
     upSize();
     downSize();
     playText();
     pauseText();
     resumeText();
     printElement();
+    actionContrast();
+    redirectURL();
 });
 
 var content_post_title = $('#id-content-post span');
@@ -110,5 +111,18 @@ function resumeText() {
     });
 }
 
-  
+function redirectURL() {
+    var btn_redirect_face = $('#id_facebook_redirect');
+    var btn_redirect_twitter = $('#id_twitter_redirect');
+    var currentUrl = window.location.href;
+    
+    // Link for facebook
+    var urlComplete = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(currentUrl);
+    btn_redirect_face.attr('href', urlComplete);
+    
+    // Link for twitter
+    var urlCompleteTwitter = "https://twitter.com/intent/tweet/?text=Giới thiệu chung tỉnh Quảng Nam&amp;url=" + encodeURIComponent(currentUrl);
+    btn_redirect_twitter.attr('href', urlCompleteTwitter);
+}
+
   

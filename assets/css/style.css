@@ -199,7 +199,7 @@ main{
     background-color: var(--bg-color-main-gray);
 }
 .left_post{
-    background-color: var(--txt-header-color);
+    padding: 0;
 }
 
 
@@ -208,7 +208,8 @@ main{
     padding: 10px 0;
 }
 .infor_detail_post{
-    padding: 10px 0px;
+    padding: 10px 10px;
+    background-color: var(--bg-color-white);
 }
 .left_post .breadcrumb{
     padding: 0.75rem 1rem;
@@ -244,7 +245,8 @@ main{
 .infor_time_post{
     display: flex;
 }
-.infor_time_post .calendar, .infor_time_post .number_views, .list_related .calendar{
+.infor_time_post .calendar, .infor_time_post .number_views, .list_related .calendar,
+.item_post_cate .calendar{
     font-style: italic;
     font-size: 13px;
     margin-left: 7px;
@@ -492,6 +494,142 @@ main{
     border:0.5px solid #ccc;
     color: var(--txt-light-black);
 }
+
+
+/*----------------Categories post ----------------*/
+.list_post_cate .item_post_cate{
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+.item_post_cate{
+    display: flex;
+}
+.item_post_cate .left_post_cate{
+    margin-right: 20px;
+}
+.item_post_cate .left_post_cate .img_post_cate{
+    width: 282px;
+}
+.item_post_cate .left_post_cate .img_post_cate img{
+    width: 100%;
+}
+.list_post_cate .item_post_cate:not(:last-child){
+    border-bottom: 1px solid #ccc;
+}
+ .item_post_cate h3{
+    font-size: 16px;
+    font-weight: 700;
+}
+ .item_post_cate h3 a{
+    color: var(--txt-light-black);
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.item_post_cate h3 a:hover{
+    color: var(--bg-color-red);
+}
+.desc_post_cate{
+    margin: 5px 0;
+}
+.desc_post_cate p{
+    margin: 0;
+}
+.btn_view_post{
+    text-align: right;
+}
+.btn_view_post a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--txt-color-blue);
+    font-style: italic;
+    font-size: 14px;
+}
+.pagination_post{
+    padding-top: 20px;
+    text-align: center;
+}
+.pagination_post ul{
+    display: inline-flex;
+}
+.pagination_post ul li{
+    list-style: none;
+}
+.pagination_post ul li a{
+    text-decoration: none;
+    color: var(--txt-color-blue);
+    border-top:1px  solid #ddd;
+    border-bottom:1px  solid #ddd;
+    border-left: 0.5px solid #ddd;
+    padding: 0.5rem 0.75rem;
+}
+.pagination_post ul li a:last-child{
+    border-right: 0.5px solid #ddd;
+}
+.pagination_post ul li a.active, 
+.pagination_post ul li a:hover,
+.pagination_post ul li a:hover i{
+    background-color: var(--txt-color-blue);
+    color: var(--bg-color-white);
+    border: 0.5px solid var(--txt-color-blue);
+}
+.pagination_post ul li a i{
+    font-weight: normal;
+    font-size: 10px;
+    color: var(--txt-color-blue);
+}
+.pagination_post ul li a i:not(:first-child){
+    margin-left: -5px;
+}
+
+/*----------------Member----------------*/
+.member_organize .title-member{
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+.list_person_member table tbody td{
+    text-align: left;
+}
+.list_person_member table tbody td:first-child{
+    text-align: center;
+}
+.list_person_member table .avatar_member{
+    width: 75px;
+    height: 75px;
+    margin: auto;
+}
+.list_person_member table .avatar_member img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list_person_member table .number_member a,
+.list_person_member table .email_member a{
+    text-decoration: none;
+}
+.list_person_member table .number_member a:hover,
+.list_person_member table .email_member a:hover{
+    color: var(--bg-color-red);
+}
+.table>:not(caption)>*>* {
+    padding: 0.75rem 0.5rem;
+}
+.list_person_member table .name_member span,
+.list_person_member table .position span{
+    font-weight: 700;
+}
+.list_person_member table .position{
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
 /*---------------- RESPONSE ----------------*/
 @media screen and (min-width: 1200px) {
     body.af_document .container, body.af_document .container-lg, body.af_document .container-md, body.af_document .container-sm, body.af_document .container-xl, body div.container, body div.container-lg, body div.container-md, body div.container-sm, body div.container-xl{
