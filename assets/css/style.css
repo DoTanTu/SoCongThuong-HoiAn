@@ -208,7 +208,7 @@ main{
     padding: 10px 0;
 }
 .infor_detail_post{
-    padding: 10px 10px;
+    padding: 10px 0px;
 }
 .left_post .breadcrumb{
     padding: 0.75rem 1rem;
@@ -285,6 +285,11 @@ main{
 }
 .content_post{
     color: var(--txt-main-color);
+    padding: 5px;
+}
+.content_post.active{
+    background-color: var(--txt-color-black);
+    color: var(--bg-color-white);
 }
 .content_post .sub_title{
     font-weight: 700;
