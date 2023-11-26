@@ -56,7 +56,9 @@
     --bg-color-gray:#E9ECEF;
     --bg-color-main-gray:#f4f5f6;
 }
-
+html{
+    scroll-behavior: smooth scroll;
+}
 body {
     font-family: 'Roboto', sans-serif, arial;
     font-size: 14px;
@@ -206,6 +208,7 @@ main{
 /*---------------- post ----------------*/
 .post__main{
     padding: 10px 0;
+
 }
 .infor_detail_post{
     padding: 10px 10px;
