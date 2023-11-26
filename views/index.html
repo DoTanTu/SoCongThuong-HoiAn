@@ -21,40 +21,108 @@
 <body>
   <header>
     <div class="container">
-      <div class="header-banner"></div>
-      <div class="navbar__web">
-        <nav>
-          <ul class="navbar__items">
-            <li class="navbar__item navbar__item__active">
-              TRANG CHỦ
-            </li>
-            <li class="navbar__item">
-              GIỚI THIỆU CHUNG
-            </li>
-            <li class="navbar__item">
-              TRA CỨU VĂN BẢN
-            </li>
-            <li class="navbar__item">
-              DỊCH VỤ CÔNG TRỰC TUYẾN
-            </li>
-            <li class="navbar__item">
-              THÔNG TIN, THÔNG BÁO
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="navbar__mobile">
+      <div class="header-banner">
+        <div class="row">
 
+          <div class="navbar__web">
+            <div class="img-banner">
+              <img src="../assets/images/home/header-banner.jpg" alt="...">
+            </div>
+            <nav class="nav">
+              <a class="nav-link active" aria-current="page" href="#">TRANG CHỦ</a>
+              <a class="nav-link" href="#">GIỚI THIỆU CHUNG</a>
+              <a class="nav-link" href="#">TRA CỨU VĂN BẢN</a>
+              <a class="nav-link" href="#">DỊCH VỤ CÔNG TRỰC TUYẾN</a>
+              <a class="nav-link" href="#">THÔNG TIN, THÔNG BÁO</a>
+            </nav>
+          </div>
+          <div class="navbar__mobile">
+          </div>
+        </div>
       </div>
     </div>
   </header>
   <main>
     <div class="container">
-      <div class="home__main">
-        <div class="left_home">
+      <div class="home__main row">
+        <div class="left_home col-lg-9">
           <section class="news">
-            <div class="content__news">
-              ...
+            <div class="row">
+
+              <div class="content__news col-lg-8">
+                <div class="swiper mySwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="info">
+                        <div class="image">
+                          <img src="../assets/images/home/sliders/news-1.jpg" alt="...">
+                        </div>
+                        <div class="content">
+                          <a href="#">
+                            <p class="title">Title</p>
+                          </a>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quo!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+              <div class="newest col-lg-4">
+                <div class="newest-header">
+                  <div class="bg-header">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Tin mới</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Đọc nhiều</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="newest-list">
+                    <div class="hot-news">
+                      <div class="scroll-hot-news">
+                        <ul class="lists pt-2">
+                          <li>
+                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                          </li>
+                          <li>
+                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                          </li>
+                          <li>
+                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                          </li>
+                          <li>
+                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                          </li>
+                          <li>
+                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;">
+                        <div class="mCSB_draggerContainer">
+                          <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 140px; max-height: 260px; top: 0px;">
+                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
+                          </div>
+                          <div class="mCSB_draggerRail"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
           <section class="commerce">
@@ -83,15 +151,65 @@
           </section>
           <section class="industry">
             <div class="content__industry">
-  
+
             </div>
           </section>
         </div>
-        <div class="right_home">
-  
+        <div class="right_home col-lg-3">
+          <div class="sidebar_post row">
+            <div class="col-md-6 col-lg-12">
+              <div class="speaker__infor">
+                <div class="heading_speaker">
+                  <h3>Thông tin người phát ngôn</h3>
+                </div>
+                <div class="body_speaker">
+                  <div class="item-infor">
+                    <span>Họ và tên:</span>
+                    Đặng Bá Dự
+                  </div>
+                  <div class="item-infor">
+                    <span>Chức vụ:</span>
+                    Giám đốc
+                  </div>
+                  <div class="item-infor">
+                    <span>Số điện thoại:</span>
+                    0905666999 (02353852641)
+                  </div>
+                  <div class="item-infor">
+                    <span>Email:</span>
+                    dudb@quangnam.gov.vn
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-12">
+              <div class="banner__images">
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_1.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_2.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_3.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_4.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_5.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_6.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_7.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
   </main>
   <footer>
     <div class="container">
@@ -134,6 +252,7 @@
   <script src="../assets/js/jquery-3.7.1.min.js"></script>
   <script src="../assets/js/swiper-bundle.min.js"></script>
   <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/swiper.js"></script>
 </body>
 
 </html>
