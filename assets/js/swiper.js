@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+var swiper = new Swiper(".news_banner", {
     
     loop: true,
     navigation: {
@@ -6,3 +6,13 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+var swiper = new Swiper(".activities_banner", {
+    slidesPerView: 3,
+    spaceBetween: 2,
+    freeMode: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });

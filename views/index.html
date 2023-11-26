@@ -11,6 +11,7 @@
 
   <!-- file syle ở dưới vì đôi khi cần ghi đè bootstrap hoặc thư viện css khác,
      quy tắt là ưu tiên trên xuống dưới -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -50,7 +51,7 @@
             <div class="row">
 
               <div class="content__news col-lg-8">
-                <div class="swiper mySwiper">
+                <div class="swiper news_banner">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
                       <div class="info">
@@ -79,8 +80,8 @@
                 </div>
               </div>
               <div class="newest col-lg-4">
-                <div class="newest-header">
-                  <div class="bg-header">
+                <div class="newest_header">
+                  <div class="bg_header">
                     <ul class="nav nav-tabs">
                       <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#">Tin mới</a>
@@ -91,9 +92,21 @@
                     </ul>
                   </div>
                   <div class="newest-list">
-                    <div class="hot-news">
-                      <div class="scroll-hot-news">
+                    <div class="hot_news">
+                      <div class="scroll_hot_news">
                         <ul class="lists pt-2">
+                          <li>
+                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                          </li>
+                          <li>
+                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                          </li>
+                          <li>
+                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                          </li>
+                          <li>
+                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                          </li>
                           <li>
                             <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
                           </li>
@@ -111,52 +124,389 @@
                           </li>
                         </ul>
                       </div>
-                      <div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-light mCSB_scrollTools_vertical" style="display: block;">
-                        <div class="mCSB_draggerContainer">
-                          <div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 140px; max-height: 260px; top: 0px;">
-                            <div class="mCSB_dragger_bar" style="line-height: 30px;"></div>
-                          </div>
-                          <div class="mCSB_draggerRail"></div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <section class="commerce">
-            <div class="content__commerce">
-              <div class="heading__commerce">
-                <h3>Title</h3>
-              </div>
-              <div class="main__commerce">
-                <ul class="list_tabs">
-                  <li><a href="">Item</a></li>
-                  <li><a href="">Item</a></li>
-                  <li><a href="">Item</a></li>
-                  <li><a href="">Item</a></li>
-                  <li><a href="">Item</a></li>
-                </ul>
-                <div class="tab_content">
-                  <div class="tab_content_item">
-                    ...
+          <section class="slider_banners">
+            <div class="slider_banner mb-0">
+              <a href="#" target="_blank">
+                <img src="../assets/images/home/banner-1.png" alt="...">
+              </a>
+            </div>
+            <div class="slider_banner mb-0">
+              <a href="#" target="_blank">
+                <img src="../assets/images/home/banner-2.gif" alt="...">
+              </a>
+            </div>
+          </section>
+          <section class="home__services">
+            <div class="service">
+              <a href="#" target="_blank">
+                <img src="../assets/images/home/services/service-1.png" alt="...">
+              </a>
+            </div>
+            <div class="service">
+              <a href="#" target="_blank">
+                <img src="../assets/images/home/services/service-2.png" alt="...">
+              </a>
+            </div>
+          </section>
+          <section class="home__audio">
+            <div class="group row">
+              <div class="col-md-6 group-col">
+                <div class="box_audio">
+                  <div class="title">
+                    <img src="../assets/images/home/audios-images/image-1.png" alt="...">
+                  </div>
+                  <div class="bd-body">
+                    <audio controls="" __idm_id__="114689">
+                      <source src="../assets/audio/service-1.mp3" type="audio/ogg">
+                    </audio>
                   </div>
                 </div>
-                <div class="btn_view_all">
-                  <button>Xem tất cả</button>
+              </div>
+              <div class="col-md-6 group-col">
+                <div class="box_audio">
+                  <div class="title">
+                    <img src="../assets/images/home/audios-images/image-2.png" alt="...">
+                  </div>
+                  <div class="bd-body">
+                    <audio controls="" __idm_id__="114689">
+                      <source src="../assets/audio/service-2.mp3" type="audio/ogg">
+                    </audio>
+                  </div>
                 </div>
               </div>
             </div>
           </section>
-          <section class="industry">
-            <div class="content__industry">
-
+          <section>
+            <div class="slider_banner mb-0">
+              <a href="#" target="_blank">
+                <img src="../assets/images/home/banner-3.png" alt="...">
+              </a>
+            </div>
+          </section>
+          <section>
+            <div class="home__module">
+              <div class="heading_module">
+                <a href="#">
+                  <b>THƯƠNG MẠI</b>
+                </a>
+              </div>
+              <div class="content_module">
+                <div class="bg_header">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Văn bản</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Xúc tiến thương mại</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">An toàn thực phẩm</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg_content">
+                  <div class="single_post row">
+                    <img src="../assets/images/home/posts/post-1.jpeg" alt="..." class="col-md-3">
+                    <div class="content col-md-9">
+                      <a href="#">
+                        <b class="title">Ban hành Nghị định số 80/2023/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 95/2021/NĐ-CP và Nghị định số 83/NĐ-CP của Chính phủ</b>
+                      </a>
+                      <p class="upload_date">23/11/2023 | 08:01 AM</p>
+                      <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, ullam.</p>
+                    </div>
+                  </div>
+                  <ul class="lists pt-2">
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                  </ul>
+                  <div class="bottom_documents">
+                    <div class="see_all">
+                      <a href="#">Xem tất cả</a>
+                      <i class="fa fa-angle-double-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="home__module">
+              <div class="heading_module">
+                <a href="#">
+                  <b>CÔNG NGHIỆP</b>
+                </a>
+              </div>
+              <div class="content_module">
+                <div class="bg_header">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Văn bản</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Quy hoạch</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Khuyến công</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg_content">
+                  <div class="single_post row">
+                    <img src="../assets/images/home/posts/post-1.jpeg" alt="..." class="col-md-3">
+                    <div class="content col-md-9">
+                      <a href="#">
+                        <b class="title">Ban hành Nghị định số 80/2023/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 95/2021/NĐ-CP và Nghị định số 83/NĐ-CP của Chính phủ</b>
+                      </a>
+                      <p class="upload_date">23/11/2023 | 08:01 AM</p>
+                      <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, ullam.</p>
+                    </div>
+                  </div>
+                  <ul class="lists pt-2">
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                  </ul>
+                  <div class="bottom_documents">
+                    <div class="see_all">
+                      <a href="#">Xem tất cả</a>
+                      <i class="fa fa-angle-double-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="home__module">
+              <div class="heading_module">
+                <a href="#">
+                  <b>TIN TỔNG HỢP</b>
+                </a>
+              </div>
+              <div class="content_module">
+                <div class="bg_header">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Báo cáo ngành</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Công khai ngân sách</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Chuyên mục PBGDPL</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg_content">
+                  <div class="single_post row">
+                    <img src="../assets/images/home/posts/post-1.jpeg" alt="..." class="col-md-3">
+                    <div class="content col-md-9">
+                      <a href="#">
+                        <b class="title">Ban hành Nghị định số 80/2023/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 95/2021/NĐ-CP và Nghị định số 83/NĐ-CP của Chính phủ</b>
+                      </a>
+                      <p class="upload_date">23/11/2023 | 08:01 AM</p>
+                      <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, ullam.</p>
+                    </div>
+                  </div>
+                  <ul class="lists pt-2">
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                  </ul>
+                  <div class="bottom_documents">
+                    <div class="see_all">
+                      <a href="#">Xem tất cả</a>
+                      <i class="fa fa-angle-double-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="home__module">
+              <div class="heading_module">
+                <a href="#">
+                  <b>HOẠT ĐỘNG ĐOÀN THỂ</b>
+                </a>
+              </div>
+              <div class="content_module">
+                <div class="bg_header">
+                  <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Văn bản</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg_content">
+                  <div class="single_post row">
+                    <img src="../assets/images/home/posts/post-1.jpeg" alt="..." class="col-md-3">
+                    <div class="content col-md-9">
+                      <a href="#">
+                        <b class="title">Ban hành Nghị định số 80/2023/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 95/2021/NĐ-CP và Nghị định số 83/NĐ-CP của Chính phủ</b>
+                      </a>
+                      <p class="upload_date">23/11/2023 | 08:01 AM</p>
+                      <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, ullam.</p>
+                    </div>
+                  </div>
+                  <ul class="lists pt-2">
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                  </ul>
+                  <div class="bottom_documents">
+                    <div class="see_all">
+                      <a href="#">Xem tất cả</a>
+                      <i class="fa fa-angle-double-right"></i>
+                    </div>
+                  </div>
+                  <div class="banner">
+                    <a href="#">
+                      <img src="../assets/images/home/banner-4.png" alt="...">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="activities_sliders">
+              <div class="heading_sliders">
+                <a href="#">
+                  <b>HÌNH ẢNH HOẠT ĐỘNG</b>
+                </a>
+              </div>
+              <div class="body_sliders">
+                <div class="swiper activities_banner">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../assets/images/home/activities/activity-1.jpg" alt="...">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../assets/images/home/activities/activity-2.jpg" alt="...">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../assets/images/home/activities/activity-3.jpg" alt="...">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../assets/images/home/activities/activity-4.jpg" alt="...">
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#">
+                        <img src="../assets/images/home/activities/activity-5.jpg" alt="...">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>
         <div class="right_home col-lg-3">
           <div class="sidebar_post row">
+            <div class="col-md-6 col-lg-12">
+              <div class="new_documents">
+                <div class="heading_documents">
+                  <h3>Văn bản mới</h3>
+                </div>
+                <div class="body_documents">
+                  <ul class="lists pt-2">
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                      <div class="interact">
+                        <a href="#">Xem trước</a>
+                        <a href="#">Tải về</a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                      <div class="interact">
+                        <a href="#">Xem trước</a>
+                        <a href="#">Tải về</a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                      <div class="interact">
+                        <a href="#">Xem trước</a>
+                        <a href="#">Tải về</a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                      <div class="interact">
+                        <a href="#">Xem trước</a>
+                        <a href="#">Tải về</a>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                      <div class="interact">
+                        <a href="#">Xem trước</a>
+                        <a href="#">Tải về</a>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bottom_documents">
+                  <div class="see_all">
+                    <a href="#">Xem tất cả</a>
+                    <i class="fa fa-angle-double-right"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="col-md-6 col-lg-12">
               <div class="speaker__infor">
                 <div class="heading_speaker">
@@ -178,6 +528,37 @@
                   <div class="item-infor">
                     <span>Email:</span>
                     dudb@quangnam.gov.vn
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-12">
+              <div class="video_lib">
+                <div class="heading_video">
+                  <h3>Thư viện video</h3>
+                </div>
+                <div class="body_video">
+                  <div class="video_play">
+                    <video controls autoplay>
+                      <source src="../assets/videos/home/video-1.mp4" type="video/mp4">
+                    </video>
+                  </div>
+                  <ul class="list_video pt-2">
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bottom_video">
+                  <div class="see_all">
+                    <a href="#">Xem tất cả</a>
+                    <i class="fa fa-angle-double-right"></i>
                   </div>
                 </div>
               </div>
@@ -205,6 +586,87 @@
                 <a href="">
                   <img src="../assets/images/post_categories/image_banner_7.png" alt="">
                 </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_3.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_4.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_5.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_6.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_7.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_3.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_4.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_5.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_6.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../assets/images/post_categories/image_banner_6.png" alt="">
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-12">
+              <div class="speaker__infor">
+                <div class="heading_speaker">
+                  <h3>Hỗ trợ trực tuyến</h3>
+                </div>
+                <div class="body_info">
+                  <div class="bd_body">
+                    <p>Bộ phận tiếp nhận và trả kết quả:</p>
+                    <b>Hoàng Thị Kim Oanh</b>
+                    <br>
+                    <p>Số điện thoại:</p>
+                    <b>(0235).3.815.806</b>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-12">
+              <div class="video_lib">
+                <div class="heading_video">
+                  <h3>Thông tin cần biết</h3>
+                </div>
+                <div class="body_list">
+                  <ul class="list_info pt-2">
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                    <li>
+                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-12">
+              <div class="links">
+                <div class="heading_link">
+                  <h3>Liên kết website</h3>
+                </div>
+                <div class="body_link">
+                  <select>
+                    <option value="">Bộ Công thương</option>
+                    <option value="">Báo Quảng Nam</option>
+                    <option value="">Bưu điện Quảng Nam</option>
+                    <option value="">Bộ Tư pháp</option>
+                  </select>
+                </div>
               </div>
             </div>
           </div>
@@ -213,36 +675,48 @@
   </main>
   <footer>
     <div class="container">
-      <div class="footer__header">
-        <div class="footer__header__link">
-          <a href="#">Trang chủ</a>
-          <span>|</span>
-          <a href="#">Giới thiệu</a>
-        </div>
-      </div>
-      <div class="footer__body">
-        <div class="footer__body_left">
-          <p class="footer__body_left__title">Portal: <span>Sở Công Thương Quảng Nam</span></p>
-          <p class="footer__body_left__title">Đơn vị quản lý: </p><span>Sở Công Thương tỉnh Quảng Nam</span>
-          <p class="footer__body_left__title">Chịu trách nhiệm chính: </p><span>Đặng Bá Dự - Giám đốc Sở</span>
-          <div class="footer__body_left__contact-info">
-            <p class="footer__body_left__title">Điện thoại: </p><span>(0235).3852 641</span>
-            <p>-</p>
-            <p class="footer__body_left__title">Fax: </p><span>(0235).3859130</span>
-            <p>-</p>
-            <p class="footer__body_left__title">Email: </p><span>socongthuongqnam@gmail.com - sct@quangnam.gov.vn</span>
+      <div class="row">
+        <div class="footer__header">
+          <div class="footer__header__link">
+            <a href="#">Trang chủ</a>
+            <span>|</span>
+            <a href="#">Giới thiệu</a>
           </div>
-          <p>Ghi rõ nguồn congthuong.quangnam.gov.vn khi sử dụng thông tin trên website này.</p>
-          <p>Giấy phép số 02/GP-TTĐT do Sở Thông tin và Truyền thông tỉnh Quảng Nam cấp ngày 21 tháng 4 năm 2020.</p>
         </div>
-        <div class="footer__body_right">
-          <div class="footer__body_right__item">
-            <p>Tổng lượt truy cập</p>
-            <p>225,586</p>
-          </div>
-          <div class="footer__body_right__item">
-            <p>Truy cập trong ngày</p>
-            <p>16</p>
+        <div class="footer__body">
+          <div class="row">
+            <div class="footer_left col-md-9">
+              <div class="copyright">
+                <b>Portal Sở Công Thương Quảng Nam</b>
+                <br>
+                <b>Đơn vị quản lý:&nbsp;</b>
+                <span>Sở Công Thương tỉnh Quảng Nam</span>
+                <br>
+                <b>Chịu trách nhiệm chính:&nbsp;</b>
+                <span>Đặng Bá Dự - Giám đốc Sở</span>
+                <br>
+                <b>Điện thoại:&nbsp;</b>
+                <span>(0235).3852 641 -</span>
+                <b>&nbsp;Fax:&nbsp;</b>
+                <span>(0235).3859130 -</span>
+                <b>&nbsp;Email:&nbsp;</b>
+                <span>socongthuongqnam@gmail.com - sct@quangnam.gov.vn</span>
+                <br>
+                <span>Ghi rõ nguồn congthuong.quangnam.gov.vn khi sử dụng thông tin trên website này.</span>
+                <span>Giấy phép số 02/GP-TTĐT do Sở Thông tin và Truyền thông tỉnh Quảng Nam cấp ngày 21 tháng 4 năm 2020.</span>
+              </div>
+            </div>
+            <div class="footer_right col-md-3">
+              <div class="static-footer text-center">
+
+                <b>Tổng lượt truy cập</b>
+                <h5>225,586</h5>
+                <br>
+                <b>Truy cập trong ngày</b>
+                <h5>16</h5>
+                <br>
+              </div>
+            </div>
           </div>
         </div>
       </div>
