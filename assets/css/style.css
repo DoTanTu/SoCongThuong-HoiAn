@@ -124,24 +124,13 @@ header {
     padding: 0;
 }
 
-/* .navbar__web .nav-link {
-    height: 100%;
-    padding: 10px 14px;
-    justify-content: start;
-    color: var(--txt-header-color);
-    font-size: 13.5px;
-}
 
 
-.nav-link.active {
-    color: var(--txt-navbar-checked-color);
-}
 
-.nav-link:hover {
+.nav-tabs .nav-link {
     color: var(--txt-navbar-checked-color);
     cursor: pointer;
-} */
-
+} 
 /*---------------- FOOTER ----------------*/
 footer {
     background-color: var(--bg-color-main-gray);
@@ -341,6 +330,7 @@ footer {
     visibility: hidden;
     position: absolute;
     top: 120%;
+    z-index: 999;
     transition: all 0.3s;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }
