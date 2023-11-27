@@ -167,7 +167,10 @@ footer {
 .footer__header span {
     padding: 10px;
 }
-
+.static-footer h5{
+    font-weight: 600;
+    letter-spacing: 2px;
+}
 a {
     text-decoration: none;
 }
@@ -247,7 +250,17 @@ footer {
     position: relative;
     color: var(--txt-color-white);
 }
-
+.swiper-button-prev,.swiper-button-next {
+    width: 45px;
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+}
+.swiper-button-prev::after, .swiper-button-next::after{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--txt-light-black);
+}
 .info a {
     text-decoration: none;
     color: var(--txt-color-white);
@@ -301,11 +314,34 @@ footer {
     height: 100%;
     background: linear-gradient(var(--bg-color-news-header-start), var(--bg-color-news-header-end));
 }
+.newest_header .nav {
+    padding: 5px 0px 0px 15px;
+}
+
+.newest_header .nav-link {
+    padding: 4px 10px;
+    color: var(--txt-light-black);
+    font-size: 15px;
+}
+
+.newest_header .nav-link.active {
+    color: var(--txt-navbar-actived-color);
+    font-weight: bold;
+}
+
+.newest_header .nav-link:hover {
+    color: var(--txt-navbar-actived-color);
+}
+
 .list_item_nav{
     display: flex;
     background-color: var(--bg-color-red);
     margin-left: 0;
     padding-left: 0;
+    margin-bottom: 0;
+}
+.list_item_nav .nav-link{
+    padding: 0;
 }
 .list_item_nav .nav-link .link-item{
     text-transform: uppercase;
@@ -314,8 +350,9 @@ footer {
     font-weight: bold;
     position: relative;
     font-size: 13.5px;
+    display: block;
 }
-.list_item_nav.active .link-item{
+.nav-link.active .link-item{
     color: var(--txt-navbar-checked-color);
 }
 .nav-link+.contain_submenu::after{
@@ -350,6 +387,7 @@ footer {
     font-size: 13.5px;
     color: var(--txt-light-black);
     transition: 0.3s;
+    white-space: nowrap;
 }
 .contain_submenu .sub_menu ul li a:hover{
     color: var(--bg-color-red);
@@ -793,7 +831,7 @@ a:hover {
 
 /*---------------- post ----------------*/
 .post__main {
-    padding: 10px 0;
+    padding-bottom: 10px;
 }
 
 .infor_detail_post {
