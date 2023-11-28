@@ -81,6 +81,10 @@ a {
     color: var(--txt-light-black);
 }
 
+a:visited {
+    color: var(--txt-light-black);
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 2px;
@@ -357,7 +361,7 @@ footer {
 .list_item_nav .nav-link .link-item {
     text-transform: uppercase;
     padding: 10px 14px;
-    color: var(--bg-color-white);
+    color: var(--txt-color-white);
     font-weight: bold;
     position: relative;
     font-size: 13.5px;
@@ -1490,18 +1494,21 @@ a:hover {
     position: relative;
 }
 
-.xgw.p_AFTextOnly .xjo, .xfa.p_AFTextOnly .xp3 {
+.xgw.p_AFTextOnly .xjo,
+.xfa.p_AFTextOnly .xp3 {
     padding: 5px 8px 4px 8px;
 }
 
-.xgw.p_AFTextOnly .xjr, .xfa.p_AFTextOnly .xpa {
+.xgw.p_AFTextOnly .xjr,
+.xfa.p_AFTextOnly .xpa {
     padding-left: 0px;
     padding-right: 0px;
     position: relative;
     top: -1px;
 }
 
-.xgw, .xfa {
+.xgw,
+.xfa {
     display: inline-block;
     padding: 0px;
     cursor: default;
