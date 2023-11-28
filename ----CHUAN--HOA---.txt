@@ -1,0 +1,260 @@
+-------------------------------------------------------Danh mục----------------------------------
+-1. Đường dẫn đến trang category
+-2. Đường dẫn đến trang detail
+-3. Chuyển sang tiền việt (đ)
+-4. Link để sử dụng thư viện thông báo sweetalert2
+-5. Chuyển đổi kiểu ngày về format việt
+-6. Đường dẫn truy cập các file
+-7. Lấy tên các Site
+-8. Lấy danh mục từ dataMenus
+-9. Dữ liệu lấy thanh menu
+-10. Duyệt qua lấy dataCategories lấy danh mục
+-11. Duyệt qua dataProducts lấy sản phẩm
+-12. Duyệt qua dataProducts lấy sản phẩm theo categoryIds
+-13. dataOther theo điều kiện showTop
+-14. Tìm sản phẩm theo hashtags
+-15. Lấy giá trị và mã của màu sắc hoặc size
+-16. Trang chi tiết dataProductDetail
+-17. Tìm nhanh id của danh mục
+-18. Hiển thị sản phẩm cho trang Shop
+
+
+
+------(-1)------
+<%= item.name.replace(/ /g , '-')%>-<%= item.pageId %>.<%= item._id %>.cate
+
+
+
+------(-2)------
+<%= name.replace(/ /g , '-')%>-<%= prod.pageId %>.<%= prod._id %>.html
+
+
+
+------(-3)------
+price.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })
+priceSale.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' })
+
+
+
+------(-4)------
+<%= name.replace(/ /g , '-')%>-<%= prod.pageId %>.<%= prod._id %>.html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.12/dist/sweetalert2.all.min.js"></script>
+
+
+
+------(-5)------
+<%= new Date(createdAt).toLocaleDateString("en-GB");%>
+
+
+
+------(-6)------
+<%- include('./components/footer') -%>
+
+
+
+------(-7)------
+<%if( dataMenus != undefined && dataMenus != null){
+    dataMenus.forEach(function(item){
+      name = item.name;
+      url = item.url;
+ %>
+<%})}%>
+
+
+
+------(-8)------
+<%if(dataMenus[3] != undefined && dataMenus[3]!= null){                   
+    dataMenus[3].categories.forEach(function(item){
+        if(item.parents == ''){
+            var name = item.name;
+%>                  
+<% }})}%>
+
+
+
+------(-9)------
+<ul>
+    <% if(dataMenus != undefined && dataMenus != null && dataMenus.length > 0) {
+        dataMenus.forEach(function(menu){ %>
+        <li class="<% if(menu.isSubMenu == true){%> dropdown <%}%>">
+            <a class="<% if((urlCurrentName == undefined && menu.url == "/") || menu.url == urlCurrentName) { %>active<%}%>" href="<%= menu.url %>">
+                <%= menu.name %>
+            </a>
+            <% if(menu.isSubMenu == true) {%>
+                <ul class="dropdown-menu">
+                    <% if(menu.categories != undefined && menu.categories != null && menu.categories.length > 0) {
+                        menu.categories.forEach(function(cate){
+                        if(cate.parents == "" || cate.parents == null) {%>
+                    <li>
+                        <a class="dropdown-item"
+                            href="<%= cate.name.replace(/ /g , '-')%>-<%= cate.pageId %>.<%= cate._id %>.cate">
+                            <%= cate.name %>
+                        </a>
+                        <!--Submenu_lv1 -->
+                        <%  let cate1 = menu.categories.filter (x => x.parents == cate._id)
+                            if (cate1 != null && cate1 != undefined && cate1 != "") { %>
+                            <ul>
+                                <li>
+                                    <a href="<%= cate1.name.replace(/ /g , '-')%>-<%= cate1.pageId %>.<%= cate1._id %>.cate">
+                                    <%= cate.name %>
+                                    </a>
+                                </li>
+                            </ul>
+                        <% } %>
+                    </li>
+                    <% }
+                        })
+                    } %>
+                </ul>
+            <% } %>
+        </li>
+        <% })
+     } %>
+</ul>
+
+
+
+------(-10)------
+<% if(dataCategories != undefined && dataCategories != null && dataCategories.length > 0) {
+    dataCategories.forEach(function(cate) {
+        var pathImage = ""
+        let obImage =  cate.images.find(x => x != null && x != undefined)
+        if(obImage != null) { pathImage = obImage }
+        var name = cate.name
+        var desc = cate.desc
+        var count_item = cate.products.length //Đếm số sản phẩm có trong danh mục đó
+        var seoName = cate.seoName
+        var seoKeyWord = cate.seoKeyWord
+        var seoDes = cate.seoDes
+        var seoTitle = cate.seoTitle
+%>
+<% }) } %>
+
+
+
+------(-11)------
+<% if(dataProducts != undefined && dataProducts != null && dataProducts.length > 0) {
+dataProducts.forEach(function(prod) {
+    var pathImage = ""
+    let obImage =  prod.images.find(x => x != null && x != undefined)
+    if(obImage != null){ pathImage = obImage.image }
+    var name = prod.name
+    var desc = prod.desc
+    var desShort = prod.desShort
+    var description = prod.description
+    %>
+<% })} %>
+
+
+
+------(-12)------
+<% if(dataProducts != undefined && dataProducts != null && dataProducts.length > 0) {
+dataProducts.forEach(function(prod) {
+    if(prod.categoryIds[0] === 'id của danh muc'){
+    var pathImage = ""
+    let obImage =  prod.images.find(x => x != null && x != undefined)
+    if(obImage != null){ pathImage = obImage.image }
+    var name = prod.name
+    var desc = prod.desc
+    var desShort = prod.desShort
+    var description = prod.description
+    %>
+<% }})} %>
+
+
+
+------(-13)------
+<% if(dataOther1 != undefined && dataOther1 != null && dataOther1.length > 0) {
+dataOther1.forEach(function(prod) {
+    if(prod.showTop == true){
+    var pathImage = ""
+    let obImage =  prod.images.find(x => x != null && x != undefined)
+    if(obImage != null){ pathImage = obImage.image }
+    var name = prod.name
+    var desc = prod.desc
+    var desShort = prod.desShort
+    var description = prod.description
+    %>
+<% }})} %>
+
+
+
+------(-14)-----
+<% var hashtagSanPham = dataAttibutes.find(function(attribute) {
+    return attribute._id === 'Hashtag_san_pham';
+    });
+    hashtagSanPham.values.forEach(function(attribute) {
+    var codeValue = attribute.code;
+    var nameValue = attribute.value;
+    %>
+    <li><a href="/shop?hashtag=<%=codeValue%>"><%= nameValue%></a></li>
+<%})%>
+
+
+
+------(-15)------
+<% prod.ecommercePlus.forEach((item) => {
+    const colorAtribute = item.atribute.find(attr => attr.id === 'Color_san_pham');
+    if (colorAtribute && colorAtribute.code != null && colorAtribute.code != "") {
+        var codeValue = colorAtribute.code;
+        var valueReal = colorAtribute.value;
+        %>
+    <% }}); %>
+
+
+
+------(-16)------
+<%
+    let prod = dataProductDetail
+    var pathImage = ""
+    let obImage =  prod.images.find(x => x != null && x != undefined)
+    if(obImage != null) { pathImage = obImage.image }
+    var name = prod.name
+    var desc = prod.desc
+    var desShort = prod.desShort
+    var description = prod.description
+%>
+
+// Lấy nhiều hình ảnh
+<% if (prod != null && prod.images != null ) {
+        prod.images.forEach(function(img) { %>
+            <img class="prd-img" src="<%= img %>" title="" alt="">
+<% })} %>
+
+
+
+------(-17)------
+<%if(dataOther4 != null && dataOther4 != undefined){
+                dataOther4.categories.forEach(function(cate){
+                    if(cate.name == 'ten của categories'){
+                        %>
+                    <p><%= cate.id%></p>
+                <%
+}})}%>
+
+
+
+------(-18)------
+<% if(dataProducts != undefined && dataProducts != null && dataProducts.length > 0){
+    var data = dataProducts;
+} 
+if(dataCategoryDetail){
+    data = dataCategoryDetail.products;
+}
+    if(data){
+    data.forEach(function(prod){
+        var name = prod.name;
+        var price = prod.ecommercePlus[0].price;
+        var id = prod._id;
+        var label = prod.label;
+        var pathImage = "";
+        var desShort = prod.desShort;
+        var obImage = prod.ecommercePlus[0].images[0];
+        if(obImage != null){
+            pathImage = obImage;
+        }
+%>
+<% }} %>
+
+

@@ -105,6 +105,43 @@ a {
 header {
     background-color: var(--bg-color-main-gray);
 }
+.navbar__web{
+    position: relative;
+}
+.seach_banner_web{
+    position: absolute;
+    top: 5px;
+    right: 17px;
+    display: flex;
+}
+.leanguage{
+    display: flex;
+    margin-right: 5px;
+    align-items: end;
+}
+.leanguage a{
+    margin-right: 5px;
+}
+.contain_search{
+    background-color: white;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 5px;
+    padding: none;
+}
+.contain_search input{
+    padding: 4px 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.contain_search button{
+    height: 31px;
+    width: 30px;
+    border: none;
+    outline: none;
+    background-color: white;
+}
 
 .img-banner {
     height: 124px;

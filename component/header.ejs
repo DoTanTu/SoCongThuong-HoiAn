@@ -1,0 +1,107 @@
+<header>
+  <div class="container">
+    <div class="header-banner">
+      <div class="row">
+        <div class="navbar__web">
+          <div class="seach_banner_web">
+            <div class="leanguage">
+              <a href="">
+                <img src="../public/app/assets/images/language/en.png" alt="">
+              </a>
+              <a href="">
+                <img src="../public/app/assets/images/language/vi.png" alt="">
+              </a>
+            </div>
+            <div class="contain_search">
+              <input type="text" placeholder="Tìm kiếm">
+              <button><i class="fa fa-search"></i></button>
+            </div>
+          </div>
+          <div class="img-banner">
+            <img src="../public/app/assets/images/home/header-banner.jpg" alt="...">
+          </div>
+          <nav class="navbar_list">
+
+            <!-- <ul class="list_item_nav">
+              <li class="nav-link active"><a class="link-item" href="">TRANG CHỦ</a></li>
+              <li class="nav-link contain_submenu">
+                <a class="link-item" href="">GIỚI THIỆU CHUNG</a>
+                <div class="sub_menu">
+                  <ul>
+                    <li><a href="post_categories.html">Danh mục bài viết</a></li>
+                    <li><a href="post_categories_image.html">Danh mục chứa ảnh</a></li>
+                    <li class="contain_submenu ">
+                      <a href="">Bo Cong Thuong</a>
+                      <div class="level_submenu">
+                        <ul>
+                          <li><a href="">Menu bac 3</a></li>
+                          <li><a href="">Menu bac 3</a></li>
+                          <li class="contain_submenu">
+                            <a href="">Menu bac 3</a>
+                            <div class="level_submenu">
+                              <ul>
+                                <li><a href="">Menu bac 4</a></li>
+                                <li><a href="">Menu bac 4</a></li>
+                              </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link"><a class="link-item" href="">TRA CỨU VĂN BẢN</a></li>
+              <li class="nav-link"><a class="link-item" href="">DỊCH VỤ CÔNG TRỰC TUYẾN</a></li>
+              <li class="nav-link"><a class="link-item" href="">THÔNG TIN, THÔNG BÁO</a></li>
+            </ul> -->
+
+            <ul class="list_item_nav">
+              <% if(dataMenus != undefined && dataMenus != null && dataMenus.length > 0) {
+                 dataMenus.forEach(function(menu){ %>
+              <li class="nav-link <% if(menu.isSubMenu == true){%> contain_submenu <%}%>">
+                  <a class="link-item" href="<%if(menu.isSubMenu==true){%> javascript:void(0); <%} else{%> <%= menu.url %> <%}%>">
+                <%= menu.name %>
+                </a>
+                <% if(menu.isSubMenu == true) {%>
+                <div class="sub_menu">
+                  <ul>
+                    <% if(menu.categories != undefined && menu.categories != null && menu.categories.length > 0) {
+                          menu.categories.forEach(function(cate){
+                          if(cate.parents == "" || cate.parents == null) {%>
+                    <li <%if(cate.isSubMenu == true){%> contain_submenu <%}%>>
+                      <a class="dropdown-item" href="<%= cate.name.replace(/ /g , '-')%>-<%= cate.pageId %>.<%= cate._id %>.cate">
+                        <%= cate.name %>
+                      </a>
+                      <!--Submenu_lv1 -->
+                      <%  let cate1 = menu.categories.filter (x => x.parents == cate._id)
+                              if (cate1 != null && cate1 != undefined && cate1 != "") { %>
+                      <div class="level_submenu">          
+                        <ul>
+                          <li>
+                            <a href="<%= cate1.name.replace(/ /g , '-')%>-<%= cate1.pageId %>.<%= cate1._id %>.cate">
+                              <%= cate.name %>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <% } %>
+                    </li>
+                    <% }
+                          })
+                      } %>
+                  </ul>
+                </div>
+                <% } %>
+              </li>
+              <% })
+     } %>
+            </ul>
+
+          </nav>
+        </div>
+        <div class="navbar__mobile">
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
