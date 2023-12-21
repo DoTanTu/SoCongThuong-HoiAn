@@ -35,113 +35,44 @@
                           <li class="breadcrumb-item active" aria-current="page">Giới Thiệu</li>
                         </ol>
                     </nav>
-                    <div class="list_post_cate">
+                    <div class="list_post_cate" data-infor="<%= dataCategoryDetail%>">
+
+                      <%if(dataCategoryDetail){
+                        dataCategoryDetail.products.forEach(prod=>{
+                          var name = prod.name;
+                          var desShort = prod.desShort;
+                          let pathImage = "";
+                          var obImage = prod.images[0];
+                          if(obImage){
+                            pathImage = obImage.image;
+                          }
+                       %>
                       <div class="item_post_cate">
-                        <div class="left_post_cate">
-                            <div class="img_post_cate">
-                                <img src="../public/app/assets/images/categories_images/image_1.png" alt="">
-                            </div>
-                        </div>
+                        <%if(pathImage !== ""){%>
+                          <div class="left_post_cate">
+                              <div class="img_post_cate">
+                                  <img src="../<%= pathImage%>" alt="">
+                              </div>
+                          </div>
+                          <%}%>
                         <div class="head_post_cate">
                           <h3>
-                            <a href="">Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</a>
+                            <a href="<%= name.replace(/[ ,/]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html"><%= name%></a>
                           </h3>
                           <div class="calendar">
                             <span>24/11/2023 | 08:27 AM</span>
                           </div>
                           <div class="desc_post_cate">
-                            <p>Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</p>
+                            <p><%= desShort %></p>
                           </div>
                           <div class="btn_view_post">
-                           <a href="">Xem chi tiết</a>
+                           <a href="<%= name.replace(/[ ,/]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html">Xem chi tiết</a>
                           </div>
                         </div>
                       </div>
-                      <div class="item_post_cate">
-                        <div class="left_post_cate">
-                            <div class="img_post_cate">
-                                <img src="../public/app/assets/images/categories_images/image_2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="head_post_cate">
-                          <h3>
-                            <a href="">Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</a>
-                          </h3>
-                          <div class="calendar">
-                            <span>24/11/2023 | 08:27 AM</span>
-                          </div>
-                          <div class="desc_post_cate">
-                            <p>Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</p>
-                          </div>
-                          <div class="btn_view_post">
-                           <a href="">Xem chi tiết</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item_post_cate">
-                        <div class="left_post_cate">
-                            <div class="img_post_cate">
-                                <img src="../public/app/assets/images/categories_images/image_3.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="head_post_cate">
-                          <h3>
-                            <a href="">Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</a>
-                          </h3>
-                          <div class="calendar">
-                            <span>24/11/2023 | 08:27 AM</span>
-                          </div>
-                          <div class="desc_post_cate">
-                            <p>Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</p>
-                          </div>
-                          <div class="btn_view_post">
-                           <a href="">Xem chi tiết</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item_post_cate">
-                        <div class="left_post_cate">
-                            <div class="img_post_cate">
-                                <img src="../public/app/assets/images/categories_images/image_1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="head_post_cate">
-                          <h3>
-                            <a href="">Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</a>
-                          </h3>
-                          <div class="calendar">
-                            <span>24/11/2023 | 08:27 AM</span>
-                          </div>
-                          <div class="desc_post_cate">
-                            <p>Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</p>
-                          </div>
-                          <div class="btn_view_post">
-                           <a href="">Xem chi tiết</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item_post_cate">
-                        <div class="left_post_cate">
-                            <div class="img_post_cate">
-                                <img src="../public/app/assets/images/categories_images/image_2.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="head_post_cate">
-                          <h3>
-                            <a href="">Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</a>
-                          </h3>
-                          <div class="calendar">
-                            <span>24/11/2023 | 08:27 AM</span>
-                          </div>
-                          <div class="desc_post_cate">
-                            <p>Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</p>
-                          </div>
-                          <div class="btn_view_post">
-                           <a href="">Xem chi tiết</a>
-                          </div>
-                        </div>
-                      </div>
-                    
+
+                    <% })
+                      }%>
                     </div>
                     <div class="pagination_post">
                       <ul>

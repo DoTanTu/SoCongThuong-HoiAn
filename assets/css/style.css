@@ -330,7 +330,7 @@ footer {
     position: absolute;
     width: 100%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color:#0000009e;
     bottom: 0;
     left: 0;
     z-index: 1;
@@ -344,11 +344,23 @@ footer {
     font-size: 14px;
 }
 
-.info .content .title {
+.info .content .title , .info .content p{
     font-size: 16px;
     font-weight: bold;
+    display: -webkit-box;
+    max-height: 55px;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    line-height: 21px;
+    margin-bottom: 0.5rem;
 }
-
+.info .content p{
+    font-size: 14px;
+    font-weight: normal;
+    -webkit-line-clamp: 1;
+    margin-bottom: 0;
+}
 .newest {
     padding: 0px 5px;
 }
@@ -669,6 +681,7 @@ a:hover {
     height: 37px;
     padding: 8px;
     border-bottom: 2px solid var(--bg-color-red);
+    background-image: linear-gradient(#e6e6e6, #ffffff);
 }
 
 .home__module .heading_module a {
@@ -684,7 +697,7 @@ a:hover {
 
 .home__module .content_module {
     padding: 10px;
-    background-color: var(--bg-color-white);
+    background-color: #fff;
 }
 
 .home__module .content_module .bg_header .nav-link {
@@ -718,21 +731,50 @@ a:hover {
 .single_post {
     border-bottom: 1px solid var(--bg-color-gray);
 }
-
-.bg_content .single_post img {
+.single_post .image_single_post{
+    float: left;
+    width: 150px;
+    height: 90px;
+    margin-right: 12px;
+    margin-bottom: 0;
+    overflow: hidden;
+    border: 1px solid #e8e9e9;
+    padding: 2px;
+}
+.image_single_post img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
 .bg_content .title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    height: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     padding: 0px 0px 3px;
+    margin-bottom: 3px;
+    padding-bottom: 0;
 }
 
+.bg_content .desc_single_post {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 8px;
+    margin-top: 5px;
+}
 .bg_content .upload_date {
     padding: 5px 0px;
+    font-size: 12px;
+    margin-bottom: 0;
 }
-
 .bg_content .content {
-    padding: 4px 0px 8px;
+    padding: 0px 0px 8px;
 }
 
 .activities_sliders {
@@ -1025,7 +1067,9 @@ a:hover {
     font-size: 10pt;
     text-indent: 25px;
 }
-
+.content_post_detail img{
+    width: 100%;
+}
 .sumary .list_media {
     text-align: right;
     padding-top: 10px;

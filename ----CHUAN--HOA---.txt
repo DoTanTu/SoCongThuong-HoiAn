@@ -21,12 +21,12 @@
 
 
 ------(-1)------
-<%= item.name.replace(/ /g , '-')%>-<%= item.pageId %>.<%= item._id %>.cate
+<%= item.name.replace(/[ ,/]/g, '-')%>-<%= item.pageId %>.<%= item._id %>.cate
 
 
 
 ------(-2)------
-<%= name.replace(/ /g , '-')%>-<%= prod.pageId %>.<%= prod._id %>.html
+<%= name.replace(/[ ,/]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html
 
 
 

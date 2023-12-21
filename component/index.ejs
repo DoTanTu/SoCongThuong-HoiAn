@@ -28,27 +28,34 @@
               <div class="content__news col-lg-8">
                 <div class="swiper news_banner">
                   <div class="swiper-wrapper">
+
+                    <%if(dataProducts){
+                      dataProducts.forEach((prod, index) => {
+                        if(prod.showTop == true){
+                          name = prod.name;
+                          desShort = prod.desShort;
+                          pathImage = "";
+                          obImage = prod.images[0];
+                          if(obImage){
+                            pathImage = obImage.image;
+                          }
+                        %>
                     <div class="swiper-slide">
                       <div class="info">
                         <div class="image">
-                          <img src="../public/app/assets/images/home/sliders/news-1.jpg" alt="...">
+                          <img src="../<%= pathImage%>" alt="...">
                         </div>
                         <div class="content">
                           <a href="#">
-                            <p class="title">Title</p>
+                            <p class="title"><%= name%></p>
                           </a>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, quo!</p>
+                          <p><%= desShort%></p>
                         </div>
                       </div>
                     </div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+                    <%}
+                  })
+                    }%>
                   </div>
                   <div class="swiper-button-next"></div>
                   <div class="swiper-button-prev"></div>
@@ -70,33 +77,17 @@
                     <div class="hot_news">
                       <div class="scroll_hot_news">
                         <ul class="lists pt-2">
+                          <%if(dataProducts){
+                            dataProducts.forEach((prod, index) => {
+                              if(prod.showTop == true){
+                                name = prod.name;
+                              %>
                           <li>
-                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
+                            <a href="<%= name.replace(/[ ,/]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html"><%= name%></a>
                           </li>
-                          <li>
-                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                          </li>
-                          <li>
-                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                          </li>
-                          <li>
-                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                          </li>
-                          <li>
-                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                          </li>
-                          <li>
-                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                          </li>
-                          <li>
-                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                          </li>
-                          <li>
-                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                          </li>
-                          <li>
-                            <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                          </li>
+                          <%}
+                        })
+                          }%>
                         </ul>
                       </div>
                     </div>
@@ -164,52 +155,97 @@
               </a>
             </div>
           </section>
+
+          <%if(dataCategories){
+            dataCategories.reverse().forEach(function(category){
+              
+              if(category.parents.length == 0){
+                 var name_cate_parent = category.name;
+             %>
           <section>
             <div class="home__module">
               <div class="heading_module">
                 <a href="#">
-                  <b>THƯƠNG MẠI</b>
+                  <b style="text-transform: uppercase;"><%= name_cate_parent%></b>
                 </a>
               </div>
               <div class="content_module">
                 <div class="bg_header">
                   <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Tin tức</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Văn bản</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Xúc tiến thương mại</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">An toàn thực phẩm</a>
-                    </li>
+                    <% var index = 0;
+                     dataCategories.forEach(function(category_child){
+                      if(category_child.parents.indexOf(category._id)!= -1){
+                        var name_cate_child = category_child.name;
+                        %>
+                        <li class="nav-item">
+                          <a class="nav-link <%= index ==0 ? 'active' : '' %>" aria-current="page" href="<%= category_child.name.replace(/ /g , '-')%>-<%= category_child.pageId %>.<%= category_child._id %>.cate"><%= name_cate_child%></a>
+                      </li>
+                     <%index++ }
+                      })%>
                   </ul>
                 </div>
                 <div class="bg_content">
-                  <div class="single_post row">
-                    <img src="../public/app/assets/images/home/posts/post-1.jpeg" alt="..." class="col-md-3">
-                    <div class="content col-md-9">
-                      <a href="#">
-                        <b class="title">Ban hành Nghị định số 80/2023/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 95/2021/NĐ-CP và Nghị định số 83/NĐ-CP của Chính phủ</b>
-                      </a>
-                      <p class="upload_date">23/11/2023 | 08:01 AM</p>
-                      <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, ullam.</p>
-                    </div>
-                  </div>
+                  <% if (dataCategories) {
+                      var index2 = 0;
+                      dataCategories.forEach(function (category_children) {
+                          if (category_children.parents.indexOf(category._id) !== -1 && index2 === 0) {
+                              category_children.products.forEach((prod, index3) => {
+                                  if (index3 === 0) {
+                                      var name_child_rend = prod.name;
+                                      var pathImage = "";
+                                      var desShort = prod.desShort;
+                                      var obImage = prod.images[0];
+                                      if (obImage) {
+                                          pathImage = obImage.image;
+                                      }
+                                       %>
+                                      <div class="single_post row ms-0">
+                                          <div class="image_single_post">
+                                            <img src="../<%= pathImage %>" alt="..." class="col-md-3">
+                                          </div>
+                                          <div class="content col-md-9">
+                                              <h3 class="title"> <a href="<%= name_child_rend.replace(/[ ,/]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html"><%= name_child_rend %></a> </h3>
+                                              <p class="upload_date">23/11/2023 | 08:01 AM</p>
+                                              <p class="desc_single_post"><%= desShort %></p>
+                                          </div>
+                                      </div>
+              <%
+                                  }
+                              });
+                              index2++;
+                          }
+                      });
+                  }
+                  %>
+              
                   <ul class="lists pt-2">
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
+                      <% if (dataCategories) {
+                          var index4 = 0;
+                          dataCategories.forEach(function (category_children) {
+                              if (category_children.parents.indexOf(category._id) !== -1 && index4 === 0) {
+                                  category_children.products.forEach((prod, index5) => {
+                                      if (index5 > 0) {
+                                          var name_child_rend = prod.name;
+                                          var pathImage = "";
+                                          var desShort = prod.desShort;
+                                          var obImage = prod.images[0];
+                                          if (obImage) {
+                                              pathImage = obImage.image;
+                                          }
+                                  %>
+                                  <li>
+                                      <a href="<%= name_child_rend.replace(/ /g , '-')%>-<%= prod.pageId %>.<%= prod._id %>.html"><%= name_child_rend %></a>
+                                  </li>
+                                  <%
+                                      }
+                                  });
+                                  index4++;
+                              }
+                          });
+                      }
+                      %>
                   </ul>
+              
                   <div class="bottom_documents">
                     <div class="see_all">
                       <a href="#">Xem tất cả</a>
@@ -220,173 +256,7 @@
               </div>
             </div>
           </section>
-          <section>
-            <div class="home__module">
-              <div class="heading_module">
-                <a href="#">
-                  <b>CÔNG NGHIỆP</b>
-                </a>
-              </div>
-              <div class="content_module">
-                <div class="bg_header">
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Tin tức</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Văn bản</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Quy hoạch</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Khuyến công</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bg_content">
-                  <div class="single_post row">
-                    <img src="../public/app/assets/images/home/posts/post-1.jpeg" alt="..." class="col-md-3">
-                    <div class="content col-md-9">
-                      <a href="#">
-                        <b class="title">Ban hành Nghị định số 80/2023/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 95/2021/NĐ-CP và Nghị định số 83/NĐ-CP của Chính phủ</b>
-                      </a>
-                      <p class="upload_date">23/11/2023 | 08:01 AM</p>
-                      <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, ullam.</p>
-                    </div>
-                  </div>
-                  <ul class="lists pt-2">
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                  </ul>
-                  <div class="bottom_documents">
-                    <div class="see_all">
-                      <a href="#">Xem tất cả</a>
-                      <i class="fa fa-angle-double-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="home__module">
-              <div class="heading_module">
-                <a href="#">
-                  <b>TIN TỔNG HỢP</b>
-                </a>
-              </div>
-              <div class="content_module">
-                <div class="bg_header">
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Tin tức</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Báo cáo ngành</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Công khai ngân sách</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Chuyên mục PBGDPL</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bg_content">
-                  <div class="single_post row">
-                    <img src="../public/app/assets/images/home/posts/post-1.jpeg" alt="..." class="col-md-3">
-                    <div class="content col-md-9">
-                      <a href="#">
-                        <b class="title">Ban hành Nghị định số 80/2023/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 95/2021/NĐ-CP và Nghị định số 83/NĐ-CP của Chính phủ</b>
-                      </a>
-                      <p class="upload_date">23/11/2023 | 08:01 AM</p>
-                      <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, ullam.</p>
-                    </div>
-                  </div>
-                  <ul class="lists pt-2">
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                  </ul>
-                  <div class="bottom_documents">
-                    <div class="see_all">
-                      <a href="#">Xem tất cả</a>
-                      <i class="fa fa-angle-double-right"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section>
-            <div class="home__module">
-              <div class="heading_module">
-                <a href="#">
-                  <b>HOẠT ĐỘNG ĐOÀN THỂ</b>
-                </a>
-              </div>
-              <div class="content_module">
-                <div class="bg_header">
-                  <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Tin tức</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Văn bản</a>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bg_content">
-                  <div class="single_post row">
-                    <img src="../public/app/assets/images/home/posts/post-1.jpeg" alt="..." class="col-md-3">
-                    <div class="content col-md-9">
-                      <a href="#">
-                        <b class="title">Ban hành Nghị định số 80/2023/NĐ-CP sửa đổi, bổ sung một số điều của Nghị định số 95/2021/NĐ-CP và Nghị định số 83/NĐ-CP của Chính phủ</b>
-                      </a>
-                      <p class="upload_date">23/11/2023 | 08:01 AM</p>
-                      <p class="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, ullam.</p>
-                    </div>
-                  </div>
-                  <ul class="lists pt-2">
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                    <li>
-                      <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, sint.</a>
-                    </li>
-                  </ul>
-                  <div class="bottom_documents">
-                    <div class="see_all">
-                      <a href="#">Xem tất cả</a>
-                      <i class="fa fa-angle-double-right"></i>
-                    </div>
-                  </div>
-                  <div class="banner">
-                    <a href="#">
-                      <img src="../public/app/assets/images/home/banner-4.png" alt="...">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
+         <%  }})}%>
           <section>
             <div class="activities_sliders">
               <div class="heading_sliders">
