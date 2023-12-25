@@ -51,9 +51,9 @@
     --txt-header-color: #ffff;
     --txt-color-white: #ffff;
     --txt-navbar-checked-color: #ffff00;
-    --txt-navbar-actived-color: #c40000;
+    --txt-navbar-actived-color: #53921a;
     --txt-search-label-color: #4f4f4f --bg-color-white: #ffff;
-    --bg-color-red: #DD0F0F;
+    --bg-color-red: #53921a;    ;
     --bg-color-gray: #E9ECEF;
     --bg-color-main-gray: #f4f5f6;
     --bg-color-news-header-start: #e6e6e6;
@@ -182,6 +182,7 @@ footer {
     display: flex;
     color: var(--txt-header-color);
     background-color: var(--bg-color-red);
+    background-image: linear-gradient(#78bf38, #53921a);
     height: auto;
     align-items: center;
     justify-content: center;
@@ -264,6 +265,7 @@ footer {
 /*---------------- post ----------------*/
 .news {
     background-color: var(--bg-color-white);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     margin: 0px 0px 10px;
     padding: 10px;
 }
@@ -398,6 +400,7 @@ footer {
 .list_item_nav {
     display: flex;
     background-color: var(--bg-color-red);
+    background-image: linear-gradient(#78bf38, #53921a);
     margin-left: 0;
     padding-left: 0;
     margin-bottom: 0;
@@ -546,6 +549,7 @@ footer {
 
 .hot_news .lists {
     padding-right: 10px;
+    margin-bottom: 0;
 }
 
 .scroll_hot_news ul li {
@@ -558,7 +562,7 @@ footer {
 }
 
 .new_documents .heading_documents {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--bg-color-red);
     background: linear-gradient(#e6e6e6, #ffffff);
     padding: 8px 10px;
 }
@@ -585,7 +589,7 @@ footer {
 }
 
 .lists .interact a {
-    color: red;
+    color: var(--bg-color-red);
     font-style: italic;
     padding: 0px 5px;
 }
@@ -673,20 +677,20 @@ a:hover {
 }
 
 .home__module {
-    margin: 10px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
     background: linear-gradient(var(--bg-color-news-header-start), var(--bg-color-news-header-end));
 }
 
 .home__module .heading_module {
     height: 37px;
-    padding: 8px;
     border-bottom: 2px solid var(--bg-color-red);
     background-image: linear-gradient(#e6e6e6, #ffffff);
 }
 
 .home__module .heading_module a {
     text-decoration: none;
-    color: var(--txt-navbar-actived-color);
+    color: var(--txt-color-white);
+    padding-right: 10px;
 }
 
 .heading_module a::before {
@@ -809,7 +813,7 @@ a:hover {
 .video_lib .heading_video {
     width: 100%;
     height: 37px;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--bg-color-red);
     background: linear-gradient(#e6e6e6, #ffffff);
     padding: 8px 10px;
 }
@@ -906,7 +910,7 @@ a:hover {
 .links .heading_link {
     width: 100%;
     height: 37px;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--bg-color-red);
     background: linear-gradient(#e6e6e6, #ffffff);
     padding: 8px 10px;
 }
@@ -1145,7 +1149,7 @@ a:hover {
 }
 
 .speaker__infor .heading_speaker {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--bg-color-red);
     background: linear-gradient(#e6e6e6, #ffffff);
     padding: 8px 10px;
 }
@@ -1193,7 +1197,7 @@ a:hover {
 .sidebar_support .heading_support,
 .sidebar_need_know .heading_need_know,
 .sidebar_link_web .heading_link_web {
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid var(--bg-color-red);
     background: linear-gradient(#e6e6e6, #ffffff);
     padding: 8px 10px;
 }

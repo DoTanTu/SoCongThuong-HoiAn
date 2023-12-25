@@ -20,83 +20,82 @@
   <%- include('./components/header') -%>
   <main>
     <div class="container">
-      <div class="home__main row">
-        <div class="left_home col-lg-9">
-          <section class="news">
-            <div class="row">
-
-              <div class="content__news col-lg-8">
-                <div class="swiper news_banner">
-                  <div class="swiper-wrapper">
-
-                    <%if(dataProducts){
-                      dataProducts.forEach((prod, index) => {
-                        if(prod.showTop == true){
-                          name = prod.name;
-                          desShort = prod.desShort;
-                          pathImage = "";
-                          obImage = prod.images[0];
-                          if(obImage){
-                            pathImage = obImage.image;
-                          }
-                        %>
-                    <div class="swiper-slide">
-                      <div class="info">
-                        <div class="image">
-                          <img src="../<%= pathImage%>" alt="...">
-                        </div>
-                        <div class="content">
-                          <a href="#">
-                            <p class="title"><%= name%></p>
-                          </a>
-                          <p><%= desShort%></p>
-                        </div>
-                      </div>
+      <section class="news">
+        <div class="row">
+          <div class="content__news col-lg-8">
+            <div class="swiper news_banner">
+              <div class="swiper-wrapper">
+                <%if(dataProducts){
+                  dataProducts.forEach((prod, index) => {
+                    if(prod.showTop == true){
+                      name = prod.name;
+                      desShort = prod.desShort;
+                      pathImage = "";
+                      obImage = prod.images[0];
+                      if(obImage){
+                        pathImage = obImage.image;
+                      }
+                    %>
+                <div class="swiper-slide">
+                  <div class="info">
+                    <div class="image">
+                      <img src="../<%= pathImage%>" alt="...">
                     </div>
-                    <%}
-                  })
-                    }%>
+                    <div class="content">
+                      <a href="#">
+                        <p class="title"><%= name%></p>
+                      </a>
+                      <p><%= desShort%></p>
+                    </div>
                   </div>
-                  <div class="swiper-button-next"></div>
-                  <div class="swiper-button-prev"></div>
                 </div>
+                <%}
+              })
+                }%>
               </div>
-              <div class="newest col-lg-4">
-                <div class="newest_header">
-                  <div class="bg_header">
-                    <ul class="nav nav-tabs">
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Tin mới</a>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+          <div class="newest col-lg-4">
+            <div class="newest_header">
+              <div class="bg_header">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Tin mới</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Đọc nhiều</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="newest-list">
+                <div class="hot_news">
+                  <div class="scroll_hot_news">
+                    <ul class="lists pt-2">
+                      <%if(dataProducts){
+                        dataProducts.forEach((prod, index) => {
+                          if(prod.showTop == true){
+                            name = prod.name;
+                          %>
+                      <li>
+                        <a href="<%= name.replace(/[ ,/]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html"><%= name%></a>
                       </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Đọc nhiều</a>
-                      </li>
+                      <%}
+                    })
+                      }%>
                     </ul>
-                  </div>
-                  <div class="newest-list">
-                    <div class="hot_news">
-                      <div class="scroll_hot_news">
-                        <ul class="lists pt-2">
-                          <%if(dataProducts){
-                            dataProducts.forEach((prod, index) => {
-                              if(prod.showTop == true){
-                                name = prod.name;
-                              %>
-                          <li>
-                            <a href="<%= name.replace(/[ ,/]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html"><%= name%></a>
-                          </li>
-                          <%}
-                        })
-                          }%>
-                        </ul>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-          <section class="slider_banners">
+          </div>
+        </div>
+      </section>
+      <div class="home__main row">
+        <div class="left_home col-lg-9">
+
+          <!-- <section class="slider_banners">
             <div class="slider_banner mb-0">
               <a href="#" target="_blank">
                 <img src="../public/app/assets/images/home/banner-1.png" alt="...">
@@ -147,14 +146,14 @@
                 </div>
               </div>
             </div>
-          </section>
-          <section>
+          </section> -->
+          <!-- <section>
             <div class="slider_banner mb-0">
               <a href="#" target="_blank">
                 <img src="../public/app/assets/images/home/banner-3.png" alt="...">
               </a>
             </div>
-          </section>
+          </section> -->
 
           <%if(dataCategories){
             dataCategories.reverse().forEach(function(category){
@@ -163,11 +162,13 @@
                  var name_cate_parent = category.name;
              %>
           <section>
-            <div class="home__module">
+            <div class="home__module" style="border: 1px solid #dedede;">
               <div class="heading_module">
-                <a href="#">
-                  <b style="text-transform: uppercase;"><%= name_cate_parent%></b>
-                </a>
+                <div style="width: fit-content; padding: 8px; background-color: var(--bg-color-red);background-image: linear-gradient(#78bf38,#53921a);border-radius: 0 10px 0 0">
+                  <a href="#">
+                    <b style="text-transform: uppercase;"><%= name_cate_parent%></b>
+                  </a>
+                </div>
               </div>
               <div class="content_module">
                 <div class="bg_header">
@@ -257,7 +258,7 @@
             </div>
           </section>
          <%  }})}%>
-          <section>
+          <!-- <section>
             <div class="activities_sliders">
               <div class="heading_sliders">
                 <a href="#">
@@ -296,7 +297,7 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
         </div>
         <div class="right_home col-lg-3">
           <div class="sidebar_post row">
@@ -409,7 +410,7 @@
               </div>
             </div>
             <div class="col-md-6 col-lg-12">
-              <div class="banner__images">
+              <!-- <div class="banner__images">
                 <a href="">
                   <img src="../public/app/assets/images/post_categories/image_banner_1.png" alt="">
                 </a>
@@ -461,7 +462,7 @@
                 <a href="">
                   <img src="../public/app/assets/images/post_categories/image_banner_6.png" alt="">
                 </a>
-              </div>
+              </div> -->
             </div>
             <div class="col-md-6 col-lg-12">
               <div class="speaker__infor">
