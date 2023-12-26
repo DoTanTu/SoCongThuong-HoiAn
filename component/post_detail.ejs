@@ -37,116 +37,153 @@
                         </ol>
                     </nav>
                     <div class="sumary">
-                      <div class="detail">
-                        <div class="head_post">
-                          <h2 class="title"><%= prod.name%></h2>
-                          <div class="infor_time_post">
-                            <div class="calendar">
-                              <i class="fa fa-clock-o"></i>
-                              <span>24/11/2023 | 08:27 AM</span>
-                            </div>
-                            <div class="number_views">
-                              <i class="fa fa-eye"></i>
-                              <span>1000</span>
-                            </div>
-                          </div>
-                          <div class="list_action_post">
-                            <span class="item-action">
-                              <a href="" id="btn_print">
-                                <i class="fa fa-print"></i>
-                                In
-                              </a>
-                            </span>
-                            <span class="item-action line_left">
-                              <a href="">
-                                <i class="fa fa-envelope-o"></i>
-                                Gửi Email
-                              </a>
-                            </span>
-                            <span class="item-action line_left">
-                              <a href="" id="id_upsize">
-                                <i class="fa fa-search-plus"></i>
-                                Phóng to
-                              </a>
-                            </span>
-                            <span class="item-action line_left">
-                              <a href="" id="id_downsize">
-                                <i class="fa fa-search-minus"></i>
-                                Thu nhỏ
-                              </a>
-                            </span>
-                            <span class="item-action line_left">
-                              <a href="" id="id_contrast">
-                                <i class="fa fa-adjust "></i>
-                                Tương phản
-                              </a>
-                            </span>
-                            <div class="item-action line_left d-inline audio_action">
-                              <span>Đọc bài Viết</span>
-                              <a href="" id="id_btn_read" title="Đọc nội dung bên dưới">
-                                <i class="fa fa-play"></i>
-                              </a>
-                              <a href="" id="id_btn_pause" title="Dừng lại việt đọc">
-                                <i class="fa fa-pause"></i>
-                              </a>
-                              <a href="" id="id_btn_resum" title="Tiếp tục đọc">
-                                <i class="fa fa-forward"></i>
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="content_post" id="id-content-post">
-                          <span class="sub_title"><%= prod.desShort%></span>
-                          <div class="content_post_detail">
-                            <%- prod.description%>
-                          </div>
-                        </div>
-                        <div class="media_social">
-                           <div class="list_media">
-                            <span>Chia sẻ: </span>
-                            <ul>
-                              <li>
-                                <a href="" id="id_facebook_redirect" target="_blank"><i class="fa fa-facebook"></i>
-                                </a>
-                              </li>
-                              <li>
-                                <a href="" id="id_twitter_redirect" target="_blank">
-                                  <i class="fa fa-twitter"></i>
-                                </a>
-                              </li>
-                            </ul>
-                           </div>
-                        </div>
-                        <div class="related_post">
-                          <div class="head_related">
-                            <h3>Tin liên quan</h3>
-                          </div>
-                          <div class="list_related">
-                            <ul>
-                              <li>
-                                <a href="">Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</a>
-                                <span class="calendar">12/10/2023 | 08:08 AM</span>
-                              </li>
-                              <li>
-                                <a href="">Sửa đổi, bổ sung Quy định chức năng, nhiệm vụ, quyền hạn của các Phòng chuyên môn và tương đương thuộc Sở ban hành kèm theo Quyết định số 180/QĐ-SCT ngày 13/10/2022 của Giám đốc Sở Công Thương tỉnh Quảng Nam</a>
-                                <span class="calendar">12/10/2023 | 08:08 AM</span>
-                              </li>
-                              <li>
-                                <a href="">Quyết định phân công nhiệm vụ Giám đốc, các Phó Giám đốc Sở Công Thương tỉnh Quảng Nam</a>
-                                <span class="calendar">12/10/2023 | 08:08 AM</span>
-                              </li>
-                              <li>
-                                <a href="">Quyết định ban hành Quy định chức năng, nhiệm vụ, quyền hạn của các Phòng chuyên môn và tương đương thuộc Sở Công Thương</a>
-                                <span class="calendar">12/10/2023 | 08:08 AM</span>
-                              </li>
-                              <li>
-                                <a href="">Quyết định ban hành Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương tỉnh Quảng Nam</a>
-                                <span class="calendar">12/10/2023 | 08:08 AM</span>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
+                      <%
+                                let isCategoryMatched = false;
+                                let idProduct = dataProductDetail.categoryIds[0];
+                                dataCategories.forEach((item) => {
+                                  if(item.id == idProduct && item.name === 'Văn Bản'){
+                                    isCategoryMatched = true;
+                                  }
+                                });
+                                %>
+
+                                <% if (isCategoryMatched) { %>
+                                 <div class="container_table">
+                                  <div class="tabtop ">
+
+                                  </div>
+                                  <div class="main_table">
+                                    <table class="w-100 table table-bordered">
+                                      <tbody>
+                                        <%if(prod.descriptionPlus){
+                                          prod.descriptionPlus.forEach(item => {
+                                            %>
+                                            <tr>
+                                              <td><%= item.title%></td>
+                                              <td><%- item.description%></td>
+                                            </tr>
+                                            <%
+                                          })
+                                        }%>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                 </div>
+                                <% } else { %>
+                                  <div class="detail">
+                                    <div class="head_post">
+                                      <h2 class="title"><%= prod.name%></h2>
+                                      <div class="infor_time_post">
+                                        <div class="calendar">
+                                          <i class="fa fa-clock-o"></i>
+                                          <span>24/11/2023 | 08:27 AM</span>
+                                        </div>
+                                        <div class="number_views">
+                                          <i class="fa fa-eye"></i>
+                                          <span>1000</span>
+                                        </div>
+                                      </div>
+                                      <div class="list_action_post">
+                                        <span class="item-action">
+                                          <a href="" id="btn_print">
+                                            <i class="fa fa-print"></i>
+                                            In
+                                          </a>
+                                        </span>
+                                        <span class="item-action line_left">
+                                          <a href="">
+                                            <i class="fa fa-envelope-o"></i>
+                                            Gửi Email
+                                          </a>
+                                        </span>
+                                        <span class="item-action line_left">
+                                          <a href="" id="id_upsize">
+                                            <i class="fa fa-search-plus"></i>
+                                            Phóng to
+                                          </a>
+                                        </span>
+                                        <span class="item-action line_left">
+                                          <a href="" id="id_downsize">
+                                            <i class="fa fa-search-minus"></i>
+                                            Thu nhỏ
+                                          </a>
+                                        </span>
+                                        <span class="item-action line_left">
+                                          <a href="" id="id_contrast">
+                                            <i class="fa fa-adjust "></i>
+                                            Tương phản
+                                          </a>
+                                        </span>
+                                        <div class="item-action line_left d-inline audio_action">
+                                          <span>Đọc bài Viết</span>
+                                          <a href="" id="id_btn_read" title="Đọc nội dung bên dưới">
+                                            <i class="fa fa-play"></i>
+                                          </a>
+                                          <a href="" id="id_btn_pause" title="Dừng lại việt đọc">
+                                            <i class="fa fa-pause"></i>
+                                          </a>
+                                          <a href="" id="id_btn_resum" title="Tiếp tục đọc">
+                                            <i class="fa fa-forward"></i>
+                                          </a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="content_post" id="id-content-post">
+                                      <span class="sub_title"><%= prod.desShort%></span>
+                                      <div class="content_post_detail">
+                                        <%- prod.description%>
+                                        
+                                      </div>
+                                    </div>
+                                    <div class="media_social">
+                                       <div class="list_media">
+                                        <span>Chia sẻ: </span>
+                                        <ul>
+                                          <li>
+                                            <a href="" id="id_facebook_redirect" target="_blank"><i class="fa fa-facebook"></i>
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="" id="id_twitter_redirect" target="_blank">
+                                              <i class="fa fa-twitter"></i>
+                                            </a>
+                                          </li>
+                                        </ul>
+                                       </div>
+                                    </div>
+                                    <div class="related_post">
+                                      <div class="head_related">
+                                        <h3>Tin liên quan</h3>
+                                      </div>
+                                      <div class="list_related">
+                                        <ul>
+                                          <li>
+                                            <a href="">Quyết định về việc sửa đổi, bổ sung một số điều của Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương ban hành kèm theo Quyết định số 16/2022/QĐ-UBND ngày 18/5/2022 của UBND tỉnh Quảng Nam</a>
+                                            <span class="calendar">12/10/2023 | 08:08 AM</span>
+                                          </li>
+                                          <li>
+                                            <a href="">Sửa đổi, bổ sung Quy định chức năng, nhiệm vụ, quyền hạn của các Phòng chuyên môn và tương đương thuộc Sở ban hành kèm theo Quyết định số 180/QĐ-SCT ngày 13/10/2022 của Giám đốc Sở Công Thương tỉnh Quảng Nam</a>
+                                            <span class="calendar">12/10/2023 | 08:08 AM</span>
+                                          </li>
+                                          <li>
+                                            <a href="">Quyết định phân công nhiệm vụ Giám đốc, các Phó Giám đốc Sở Công Thương tỉnh Quảng Nam</a>
+                                            <span class="calendar">12/10/2023 | 08:08 AM</span>
+                                          </li>
+                                          <li>
+                                            <a href="">Quyết định ban hành Quy định chức năng, nhiệm vụ, quyền hạn của các Phòng chuyên môn và tương đương thuộc Sở Công Thương</a>
+                                            <span class="calendar">12/10/2023 | 08:08 AM</span>
+                                          </li>
+                                          <li>
+                                            <a href="">Quyết định ban hành Quy định chức năng, nhiệm vụ, quyền hạn và cơ cấu tổ chức của Sở Công Thương tỉnh Quảng Nam</a>
+                                            <span class="calendar">12/10/2023 | 08:08 AM</span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                <% } %>
+                     
                     </div>
                 </section>
             </div>

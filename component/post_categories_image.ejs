@@ -37,7 +37,7 @@
                     </nav>
                     <div class="list_post_cate" data-infor="<%= dataCategoryDetail%>">
 
-                      <%if(dataCategoryDetail){
+                      <%if(dataCategoryDetail.name !== 'Văn Bản'){
                         dataCategoryDetail.products.forEach(prod=>{
                           var name = prod.name;
                           var desShort = prod.desShort;
@@ -57,7 +57,7 @@
                           <%}%>
                         <div class="head_post_cate">
                           <h3>
-                            <a href="<%= name.replace(/[ ,/]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html"><%= name%></a>
+                            <a href="<%= name.replace(/[ ,/.]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html"><%= name%></a>
                           </h3>
                           <div class="calendar">
                             <span>24/11/2023 | 08:27 AM</span>
@@ -66,13 +66,298 @@
                             <p><%= desShort %></p>
                           </div>
                           <div class="btn_view_post">
-                           <a href="<%= name.replace(/[ ,/]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html">Xem chi tiết</a>
+                           <a href="<%= name.replace(/[ ,/.]/g, '-')%>-<%= prod.pageId %>.<%= prod._id %>.html">Xem chi tiết</a>
                           </div>
                         </div>
                       </div>
 
                     <% })
-                      }%>
+                      } else{
+                        %>
+                        <div class="heading">
+                          <h3 class="title text-primary">Tìm kiếm văn bản</h3>
+                        </div>
+                        <div class="form_search_options">
+                          <table cellpadding="0" cellspacing="0" border="0" summary role="presentation" class="w-100">
+                            <tbody>
+                              <tr>
+                                <td colspan="1" class="x4w">
+                                  <table cellpadding="0" cellspacing="0" border="0" summary role="presentation" class="w-100">
+                                    <tr>
+                                      <td class="left_search"></td>
+                                      <td class="right_search"></td>
+                                    </tr>
+                                    <tr class="xm6">
+                                      <td class="x15 x4z">
+                                        <label for="so_ky_hieu" class="">Số ký hiệu</label>
+                                      </td>
+                                      <td valign="top" class="xm8 xm7">
+                                        <span class="x1u" id="so_ky_hieu">
+                                          <input type="text" class="x25 w-100" id="so_ky_hieu">
+                                        </span>
+                                      </td>
+                                    </tr>
+                                    <tr class="xm6">
+                                      <td class="x15 x4z">
+                                        <label for="trich_yeu" class="">Trích yếu</label>
+                                      </td>
+                                      <td valign="top" class="xm8 xm7">
+                                        <span class="x1u" id="trich_yeu">
+                                          <input type="text" class="x25 w-100" id="trich_yeu">
+                                        </span>
+                                      </td>
+                                    </tr>
+                                    <tr class="xm6">
+                                      <td class="x15 x4z">
+                                        <label for="loai_van_ban" class="">Loại văn bản</label>
+                                      </td>
+                                      <td valign="top" class="xm8 xm7">
+                                        <span class="x1u" id="loai_van_ban">
+                                          <select id="loai_van_ban" class="x2h x25 w-100" title="-- Chọn tất cả" _afov>
+                                            <option value="" title="-- Chọn tất cả">-- Chọn tất cả</option>
+                                            <option value="0" title="Văn bản trung ương">Văn bản trung ương</option>
+                                            <option value="1" title="Văn bản ngành công thương">Văn bản ngành công thương</option>
+                                            <option value="2" title="Văn bản UBND tỉnh">Văn bản UBND tỉnh</option>
+                                            <option value="3" title="Văn bản điều hành">Văn bản điều hành</option>
+                                            <option value="4" title="Văn bản quản lý nhà nước ngành">Văn bản quản lý nhà nước ngành</option>
+                                            <option value="5" title="Thông báo kết luận">Thông báo kết luận</option>
+                                            <option value="6" title="Quyết định">Quyết định</option>
+                                            <option value="7" title="TTHC">TTHC</option>
+                                            <option value="8" title="Thông tư">Thông tư</option>
+                                            <option value="9" title="Nghị định">Nghị định</option>
+                                            <option value="10" title="Luật">Luật</option>
+                                            <option value="11" title="Chỉ thị">Chỉ thị</option>
+                                            <option value="12" title="Quy chế">Quy chế</option>
+                                            <option value="13" title="Hướng dẫn">Hướng dẫn</option>
+                                            <option value="14" title="Kế hoạch">Kế hoạch</option>
+                                            <option value="15" title="Thông tư liên tịch">Thông tư liên tịch</option>
+                                            <option value="16" title="Báo Cáo">Báo Cáo</option>
+                                            <option value="17" title="Thông báo">Thông báo</option>
+                                            <option value="18" title="Nghị quyết">Nghị quyết</option>
+                                            <option value="19" title="Công văn">Công văn</option>
+                                            <option value="20" title="Văn bản hợp nhất">Văn bản hợp nhất</option>
+                                            <option value="21" title="Chương trình">Chương trình</option>
+                                            <option value="22" title="Công Điện">Công Điện</option>
+                                            <option value="23" title="Phương án">Phương án</option>
+                                            <option value="24" title="Khác">Khác</option>
+                                            <option value="25" title="Kết quả giải quyết TTHC">Kết quả giải quyết TTHC</option>
+                                          </select>
+                                        </span>
+                                      </td>
+                                    </tr>
+                                    <tr class="xm6">
+                                      <td class="x15 x4z">
+                                        <label for="linh_vuc" class="">Lĩnh vực</label>
+                                      </td>
+                                      <td valign="top" class="xm8 xm7">
+                                        <span class="x1u" id="linh_vuc">
+                                          <select id="linh_vuc" class="x2h x25 w-100" title="Lĩnh vực Thương mại" _afov="21">
+                                            <option value="" title="-- Chọn tất cả">-- Chọn tất cả</option>
+                                            <option value="0" title="An toàn thực phẩm">An toàn thực phẩm</option>
+                                            <option value="1" title="Báo chí">Báo chí</option>
+                                            <option value="2" title="CNTT, Thương mại điện tử, viễn thông">CNTT, Thương mại điện tử, viễn thông</option>
+                                            <option value="3" title="Chương trình">Chương trình</option>
+                                            <option value="4" title="Công Thương">Công Thương</option>
+                                            <option value="5" title="Công nghiệp hỗ trợ">Công nghiệp hỗ trợ</option>
+                                            <option value="6" title="Công nghiệp tiêu dùng">Công nghiệp tiêu dùng</option>
+                                            <option value="7" title="Công nghiệp địa phương">Công nghiệp địa phương</option>
+                                            <option value="8" title="Công điện">Công điện</option>
+                                            <option value="9" title="Cải cách hành chính">Cải cách hành chính</option>
+                                            <option value="10" title="Dầu khí">Dầu khí</option>
+                                            <option value="11" title="Hoạt động xây dựng">Hoạt động xây dựng</option>
+                                            <option value="12" title="Hoạt động đoàn thể">Hoạt động đoàn thể</option>
+                                            <option value="13" title="Hóa chất">Hóa chất</option>
+                                            <option value="14" title="Khoa học công nghệ">Khoa học công nghệ</option>
+                                            <option value="15" title="Khác">Khác</option>
+                                            <option value="16" title="Khí">Khí</option>
+                                            <option value="17" title="Kế hoạch dự toán">Kế hoạch dự toán</option>
+                                            <option value="18" title="Lao động, tiền lương">Lao động, tiền lương</option>
+                                            <option value="19" title="Lĩnh vực An toàn môi trường">Lĩnh vực An toàn môi trường</option>
+                                            <option value="20" title="Lĩnh vực Công nghiệp">Lĩnh vực Công nghiệp</option>
+                                            <option value="21" selected="" title="Lĩnh vực Thương mại">Lĩnh vực Thương mại</option>
+                                            <option value="22" title="Lĩnh vực khác">Lĩnh vực khác</option>
+                                            <option value="23" title="Lĩnh vực điện">Lĩnh vực điện</option>
+                                            <option value="24" title="Lưu thông hàng hoá trong nước">Lưu thông hàng hoá trong nước</option>
+                                            <option value="25" title="Nhượng quyền thương mại">Nhượng quyền thương mại</option>
+                                            <option value="26" title="Năng lượng Kỹ thuật">Năng lượng Kỹ thuật</option>
+                                            <option value="27" title="Phòng , chống dịch COVID -19">Phòng , chống dịch COVID -19</option>
+                                            <option value="28" title="Quản lý cạnh tranh">Quản lý cạnh tranh</option>
+                                            <option value="29" title="Thanh tra">Thanh tra</option>
+                                            <option value="30" title="Thi đua, khen thưởng">Thi đua, khen thưởng</option>
+                                            <option value="31" title="Thông tin">Thông tin</option>
+                                            <option value="32" title="Thương mại Quốc tế">Thương mại Quốc tế</option>
+                                            <option value="33" title="Thương mại biên giới">Thương mại biên giới</option>
+                                            <option value="34" title="Tổng hợp">Tổng hợp</option>
+                                            <option value="35" title="Văn thư lưu trữ">Văn thư lưu trữ</option>
+                                            <option value="36" title="Vật liệu nổ công nghiệp">Vật liệu nổ công nghiệp</option>
+                                            <option value="37" title="Xuất nhập khẩu">Xuất nhập khẩu</option>
+                                            <option value="38" title="Xúc tiến thương mại">Xúc tiến thương mại</option>
+                                          </select>
+                                        </span>
+                                      </td>
+                                    </tr>
+        
+                                    <tr class="xm6">
+                                      <td class="x15 x4z">
+                                        <label for="co_quan_ban_hanh" class="">Cơ quan ban hành</label>
+                                      </td>
+                                      <td valign="top" class="xm8 xm7">
+                                        <span class="x1u" id="co_quan_ban_hanh">
+                                          <select id="co_quan_ban_hanh" class="x2h x25 w-100" title="-- Chọn tất cả" _afov="">
+                                            <option value="" title="-- Chọn tất cả">-- Chọn tất cả</option>
+                                            <option value="UBNTTINH" title="UBND tỉnh Quảng Nam">UBND tỉnh Quảng Nam</option>
+                                            <option value="SCTQN" title="Sở Công Thương tỉnh Quảng Nam">Sở Công Thương tỉnh Quảng Nam</option>
+                                            <option value="BCT" title="Bộ Công Thương">Bộ Công Thương</option>
+                                            <option value="CP" title="Chính Phủ">Chính Phủ</option>
+                                            <option value="TTCP" title="Thủ Tướng Chính Phủ">Thủ Tướng Chính Phủ</option>
+                                            <option value="BQP" title="Bộ Quốc Phòng">Bộ Quốc Phòng</option>
+                                            <option value="CHINHPHU" title="Chính Phủ">Chính Phủ</option>
+                                            <option value="BONOIVU" title="Bộ Nội Vụ">Bộ Nội Vụ</option>
+                                            <option value="QUOCHOI" title="Quốc Hội">Quốc Hội</option>
+                                            <option value="SONOIVU" title="Sở Nội Vụ">Sở Nội Vụ</option>
+                                            <option value="BOTTIN" title="Bộ Thông tin Truyền thông">Bộ Thông tin Truyền thông</option>
+                                            <option value="HDNDTINH" title="HĐND tỉnh Quảng Nam">HĐND tỉnh Quảng Nam</option>
+                                            <option value="BOKHCN" title="Bộ Khoa học Công nghệ">Bộ Khoa học Công nghệ</option>
+                                            <option value="BOKHDT" title="Bộ Kế hoạch và Đầu tư">Bộ Kế hoạch và Đầu tư</option>
+                                            <option value="VPCP" title="Văn phòng Chính phủ">Văn phòng Chính phủ</option>
+                                            <option value="BOTC" title="Bộ Tài chính">Bộ Tài chính</option>
+                                            <option value="BOYTE" title="Bộ Y tế">Bộ Y tế</option>
+                                            <option value="HDND" title="Hội đồng nhân dân">Hội đồng nhân dân</option>
+                                            <option value="BCDCOVID19" title="Ban chỉ đạo cấp tỉnh phòng, chống dịch Covid -19">Ban chỉ đạo cấp tỉnh phòng, chống dịch Covid -19</option>
+                                            <option value="TINHUY" title="Tỉnh Ủy Quảng Nam">Tỉnh Ủy Quảng Nam</option>
+                                            <option value="BCDCCHC" title="Ban chỉ đạo CCHC tỉnh">Ban chỉ đạo CCHC tỉnh</option>
+                                            <option value="CQLTT" title="Cục Quản lý thị trường tỉnh Quảng Nam">Cục Quản lý thị trường tỉnh Quảng Nam</option>
+                                            <option value="SOTT" title="Sở Thông tin &amp; Truyền thông">Sở Thông tin &amp; Truyền thông</option>
+                                            <option value="KHAC" title="Khác">Khác</option>
+                                          </select>
+                                        </span>
+                                      </td>
+                                    </tr>
+                                    <tr class="xm6">
+                                      <td class="x15 x4z">
+                                        <label for="trang_thai" class="">Trạng thái</label>
+                                      </td>
+                                      <td valign="top" class="xm8 xm7">
+                                        <span class="x1u" id="trang_thai">
+                                          <select id="trang_thai" class="x2h x25 w-100" title="-- Chọn tất cả" _afov="">
+                                            <option value="" title="-- Chọn tất cả">-- Chọn tất cả</option>
+                                            <option value="1" title="Đang còn hiệu lực">Đang còn hiệu lực</option>
+                                            <option value="2" title="Hết hiệu lực">Hết hiệu lực</option>
+                                          </select>
+                                        </span>
+                                      </td>
+                                    </tr>
+                                    <div class="x19">
+                                      <table cellpadding="0" cellspacing="0" border="0" summary="" role="presentation" style="width: 100%">
+                                        <tbody>
+                                          <tr>
+                                            <td class="x4w" colspan="1" width="50%">
+                                              <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" role="presentation">
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="width: 40.0%"></td>
+                                                    <td style="width: 60.0%"></td>
+                                                  </tr>
+                                                  <tr class="xm6" id="T:dclay:oc_1475903592r_VcKg1:plam_from">
+                                                    <td class="x15 x4z"><label class="af_panelLabelAndMessage_label-text" for="">Ban hành từ ngày</label></td>
+                                                    <td valign="top" class="xm8 xm7">
+                                                      <span id="" class="x1q">
+                                                        <input type="date" class="x2b w-100" placeholder="dd/mm/yyyy" data-afr-adffdow="1" data-afr-adftdy>
+                                                      </span>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                            <td class="x4w" colspan="1">
+                                              <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" role="presentation">
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="width: 40.0%"></td>
+                                                    <td style="width: 60.0%"></td>
+                                                  </tr>
+                                                  <tr class="xm6" id="T:dclay:oc_1475903592r_VcKg1:plam_to">
+                                                    <td class="x15 x4z"><label class="af_panelLabelAndMessage_label-text" for="">tới ngày</label></td>
+                                                    <td valign="top" class="xm8 xm7">
+                                                      <span id="" class="x1q">
+                                                        <input type="date" class="x2b w-100" placeholder="dd/mm/yyyy" data-afr-adffdow="1" data-afr-adftdy>
+                                                      </span>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td class="x4w" colspan="2">
+                                              <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" role="presentation">
+                                                <tbody>
+                                                  <tr>
+                                                    <td style="width: 20.0%"></td>
+                                                    <td style="width: 80.0%"></td>
+                                                  </tr>
+                                                  <tr>
+                                                    <td></td>
+                                                    <td class="x51">
+                                                      <div id="T:dclay:oc_1475903592r_VcKg1:b_search" class="xfa p_AFTextOnly" _afrgrp="0" role="presentation">
+                                                        <a href="#" onclick="this.focus();return false" data-afr-fcs="true" class="xp3" role="button">
+                                                          <span class="xpa">Tìm kiếm</span>
+                                                        </a>
+                                                      </div>
+                                                      <div id="T:dclay:oc_1475903592r_VcKg1:b_reset" class="xfa p_AFTextOnly" _afrgrp="0" role="presentation"><a href="#" onclick="this.focus();return false" data-afr-fcs="true" class="xp3" role="button"><span class="xpa">Làm lại</span></a></div>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="my-3">Tìm thấy&nbsp;233&nbsp;văn bản thoả mãn điều kiện tìm kiếm.</div>
+                        <div class="list-document">
+                          <div class="table-responsive">
+                            <table class="table table-bordered">
+                              <thead>
+                                <tr>
+                                  <th>Số ký hiệu</th>
+                                  <th>Ngày ban hành</th>
+                                  <th>Trích yếu</th>
+                                  <th>Trạng thái</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <% dataCategoryDetail.products.forEach( prod2 =>{
+                                  var name2 = prod2.name;
+                                  var desShort = prod2.desShort;
+                                  %>
+                                <tr>
+                                  <td>49-00005-01</td>
+                                  <td>26/07/2023</td>
+                                  <td>
+                                    <div class="name_document">
+                                      <a href="<%= name2.replace(/[ ,/.]/g, '-')%>-<%= prod2.pageId %>.<%= prod2._id %>.html">
+                                        <%= name%></a>
+                                      <div class="text_right">
+                                        <a class="link-pdf" href="#&amp;download=true">49-00005-01.pdf</a>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td>Đang có hiệu lực</td>
+                                </tr>
+                               <%})%>
+                              </tbody>
+                            </table>
+                          </div>
+                         
+                        </div>
+                      <%}%>
                     </div>
                     <div class="pagination_post">
                       <ul>

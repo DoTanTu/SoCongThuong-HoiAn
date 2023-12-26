@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="description 1, description 2">
+  <meta name="keywords" content="business">
+  <meta name="author" content="Bao Nhan - Tan Tu">
+  <meta name="MobileOptimized" content="320">
+
+  <!-- file syle ở dưới vì đôi khi cần ghi đè bootstrap hoặc thư viện css khác,
+     quy tắt là ưu tiên trên xuống dưới -->
+  <link rel="stylesheet" href="../public/app/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/app/assets/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../public/app/assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="../public/app/assets/images/logo-header.png">
+  <title>Cổng thông tin điện tử - SỞ CÔNG THƯƠNG HỘI AN</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header-banner">
+        <div class="row">
+          <div class="navbar__web">
+            <div class="img-banner">
+              <img src="../public/app/assets/images/home/header-banner.jpg" alt="...">
+            </div>
+            <nav class="navbar_list">
+              <ul class="list_item_nav">
+                <li class="nav-link active"><a class="link-item" href="">TRANG CHỦ</a></li>
+                <li class="nav-link contain_submenu">
+                  <a class="link-item" href="">GIỚI THIỆU CHUNG</a>
+                  <div class="sub_menu">
+                    <ul>
+                      <li><a href="post_categories.html">Danh mục bài viết</a></li>
+                      <li><a href="post_categories_image.html">Danh mục chứa ảnh</a></li>
+                      <li class="contain_submenu ">
+                        <a href="">Bo Cong Thuong</a>
+                        <div class="level_submenu">
+                          <ul>
+                            <li><a href="">Menu bac 3</a></li>
+                            <li><a href="">Menu bac 3</a></li>
+                            <li class="contain_submenu">
+                              <a href="">Menu bac 3</a>
+                              <div class="level_submenu">
+                                <ul>
+                                  <li><a href="">Menu bac 4</a></li>
+                                  <li><a href="">Menu bac 4</a></li>
+                                </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-link"><a class="link-item" href="">TRA CỨU VĂN BẢN</a></li>
+                <li class="nav-link"><a class="link-item" href="">DỊCH VỤ CÔNG TRỰC TUYẾN</a></li>
+                <li class="nav-link"><a class="link-item" href="">THÔNG TIN, THÔNG BÁO</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="navbar__mobile">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <div class="post__main row ms-0">
+        <div class="left_post col-lg-9">
+          <section class="infor_detail_post">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Văn bản</li>
+              </ol>
+            </nav>
+            <div class="documents_table">
+              <div class="search_adv">
+                <div class="heading">
+                  <h3 class="title text-primary">Tìm kiếm văn bản</h3>
+                </div>
+                <div class="form_search_options">
+                  <table cellpadding="0" cellspacing="0" border="0" summary role="presentation" class="w-100">
+                    <tbody>
+                      <tr>
+                        <td colspan="1" class="x4w">
+                          <table cellpadding="0" cellspacing="0" border="0" summary role="presentation" class="w-100">
+                            <tr>
+                              <td class="left_search"></td>
+                              <td class="right_search"></td>
+                            </tr>
+                            <tr class="xm6">
+                              <td class="x15 x4z">
+                                <label for="so_ky_hieu" class="">Số ký hiệu</label>
+                              </td>
+                              <td valign="top" class="xm8 xm7">
+                                <span class="x1u" id="so_ky_hieu">
+                                  <input type="text" class="x25 w-100" id="so_ky_hieu">
+                                </span>
+                              </td>
+                            </tr>
+                            <tr class="xm6">
+                              <td class="x15 x4z">
+                                <label for="trich_yeu" class="">Trích yếu</label>
+                              </td>
+                              <td valign="top" class="xm8 xm7">
+                                <span class="x1u" id="trich_yeu">
+                                  <input type="text" class="x25 w-100" id="trich_yeu">
+                                </span>
+                              </td>
+                            </tr>
+                            <tr class="xm6">
+                              <td class="x15 x4z">
+                                <label for="loai_van_ban" class="">Loại văn bản</label>
+                              </td>
+                              <td valign="top" class="xm8 xm7">
+                                <span class="x1u" id="loai_van_ban">
+                                  <select id="loai_van_ban" class="x2h x25 w-100" title="-- Chọn tất cả" _afov>
+                                    <option value="" title="-- Chọn tất cả">-- Chọn tất cả</option>
+                                    <option value="0" title="Văn bản trung ương">Văn bản trung ương</option>
+                                    <option value="1" title="Văn bản ngành công thương">Văn bản ngành công thương</option>
+                                    <option value="2" title="Văn bản UBND tỉnh">Văn bản UBND tỉnh</option>
+                                    <option value="3" title="Văn bản điều hành">Văn bản điều hành</option>
+                                    <option value="4" title="Văn bản quản lý nhà nước ngành">Văn bản quản lý nhà nước ngành</option>
+                                    <option value="5" title="Thông báo kết luận">Thông báo kết luận</option>
+                                    <option value="6" title="Quyết định">Quyết định</option>
+                                    <option value="7" title="TTHC">TTHC</option>
+                                    <option value="8" title="Thông tư">Thông tư</option>
+                                    <option value="9" title="Nghị định">Nghị định</option>
+                                    <option value="10" title="Luật">Luật</option>
+                                    <option value="11" title="Chỉ thị">Chỉ thị</option>
+                                    <option value="12" title="Quy chế">Quy chế</option>
+                                    <option value="13" title="Hướng dẫn">Hướng dẫn</option>
+                                    <option value="14" title="Kế hoạch">Kế hoạch</option>
+                                    <option value="15" title="Thông tư liên tịch">Thông tư liên tịch</option>
+                                    <option value="16" title="Báo Cáo">Báo Cáo</option>
+                                    <option value="17" title="Thông báo">Thông báo</option>
+                                    <option value="18" title="Nghị quyết">Nghị quyết</option>
+                                    <option value="19" title="Công văn">Công văn</option>
+                                    <option value="20" title="Văn bản hợp nhất">Văn bản hợp nhất</option>
+                                    <option value="21" title="Chương trình">Chương trình</option>
+                                    <option value="22" title="Công Điện">Công Điện</option>
+                                    <option value="23" title="Phương án">Phương án</option>
+                                    <option value="24" title="Khác">Khác</option>
+                                    <option value="25" title="Kết quả giải quyết TTHC">Kết quả giải quyết TTHC</option>
+                                  </select>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr class="xm6">
+                              <td class="x15 x4z">
+                                <label for="linh_vuc" class="">Lĩnh vực</label>
+                              </td>
+                              <td valign="top" class="xm8 xm7">
+                                <span class="x1u" id="linh_vuc">
+                                  <select id="linh_vuc" class="x2h x25 w-100" title="Lĩnh vực Thương mại" _afov="21">
+                                    <option value="" title="-- Chọn tất cả">-- Chọn tất cả</option>
+                                    <option value="0" title="An toàn thực phẩm">An toàn thực phẩm</option>
+                                    <option value="1" title="Báo chí">Báo chí</option>
+                                    <option value="2" title="CNTT, Thương mại điện tử, viễn thông">CNTT, Thương mại điện tử, viễn thông</option>
+                                    <option value="3" title="Chương trình">Chương trình</option>
+                                    <option value="4" title="Công Thương">Công Thương</option>
+                                    <option value="5" title="Công nghiệp hỗ trợ">Công nghiệp hỗ trợ</option>
+                                    <option value="6" title="Công nghiệp tiêu dùng">Công nghiệp tiêu dùng</option>
+                                    <option value="7" title="Công nghiệp địa phương">Công nghiệp địa phương</option>
+                                    <option value="8" title="Công điện">Công điện</option>
+                                    <option value="9" title="Cải cách hành chính">Cải cách hành chính</option>
+                                    <option value="10" title="Dầu khí">Dầu khí</option>
+                                    <option value="11" title="Hoạt động xây dựng">Hoạt động xây dựng</option>
+                                    <option value="12" title="Hoạt động đoàn thể">Hoạt động đoàn thể</option>
+                                    <option value="13" title="Hóa chất">Hóa chất</option>
+                                    <option value="14" title="Khoa học công nghệ">Khoa học công nghệ</option>
+                                    <option value="15" title="Khác">Khác</option>
+                                    <option value="16" title="Khí">Khí</option>
+                                    <option value="17" title="Kế hoạch dự toán">Kế hoạch dự toán</option>
+                                    <option value="18" title="Lao động, tiền lương">Lao động, tiền lương</option>
+                                    <option value="19" title="Lĩnh vực An toàn môi trường">Lĩnh vực An toàn môi trường</option>
+                                    <option value="20" title="Lĩnh vực Công nghiệp">Lĩnh vực Công nghiệp</option>
+                                    <option value="21" selected="" title="Lĩnh vực Thương mại">Lĩnh vực Thương mại</option>
+                                    <option value="22" title="Lĩnh vực khác">Lĩnh vực khác</option>
+                                    <option value="23" title="Lĩnh vực điện">Lĩnh vực điện</option>
+                                    <option value="24" title="Lưu thông hàng hoá trong nước">Lưu thông hàng hoá trong nước</option>
+                                    <option value="25" title="Nhượng quyền thương mại">Nhượng quyền thương mại</option>
+                                    <option value="26" title="Năng lượng Kỹ thuật">Năng lượng Kỹ thuật</option>
+                                    <option value="27" title="Phòng , chống dịch COVID -19">Phòng , chống dịch COVID -19</option>
+                                    <option value="28" title="Quản lý cạnh tranh">Quản lý cạnh tranh</option>
+                                    <option value="29" title="Thanh tra">Thanh tra</option>
+                                    <option value="30" title="Thi đua, khen thưởng">Thi đua, khen thưởng</option>
+                                    <option value="31" title="Thông tin">Thông tin</option>
+                                    <option value="32" title="Thương mại Quốc tế">Thương mại Quốc tế</option>
+                                    <option value="33" title="Thương mại biên giới">Thương mại biên giới</option>
+                                    <option value="34" title="Tổng hợp">Tổng hợp</option>
+                                    <option value="35" title="Văn thư lưu trữ">Văn thư lưu trữ</option>
+                                    <option value="36" title="Vật liệu nổ công nghiệp">Vật liệu nổ công nghiệp</option>
+                                    <option value="37" title="Xuất nhập khẩu">Xuất nhập khẩu</option>
+                                    <option value="38" title="Xúc tiến thương mại">Xúc tiến thương mại</option>
+                                  </select>
+                                </span>
+                              </td>
+                            </tr>
+
+                            <tr class="xm6">
+                              <td class="x15 x4z">
+                                <label for="co_quan_ban_hanh" class="">Cơ quan ban hành</label>
+                              </td>
+                              <td valign="top" class="xm8 xm7">
+                                <span class="x1u" id="co_quan_ban_hanh">
+                                  <select id="co_quan_ban_hanh" class="x2h x25 w-100" title="-- Chọn tất cả" _afov="">
+                                    <option value="" title="-- Chọn tất cả">-- Chọn tất cả</option>
+                                    <option value="UBNTTINH" title="UBND tỉnh Quảng Nam">UBND tỉnh Quảng Nam</option>
+                                    <option value="SCTQN" title="Sở Công Thương tỉnh Quảng Nam">Sở Công Thương tỉnh Quảng Nam</option>
+                                    <option value="BCT" title="Bộ Công Thương">Bộ Công Thương</option>
+                                    <option value="CP" title="Chính Phủ">Chính Phủ</option>
+                                    <option value="TTCP" title="Thủ Tướng Chính Phủ">Thủ Tướng Chính Phủ</option>
+                                    <option value="BQP" title="Bộ Quốc Phòng">Bộ Quốc Phòng</option>
+                                    <option value="CHINHPHU" title="Chính Phủ">Chính Phủ</option>
+                                    <option value="BONOIVU" title="Bộ Nội Vụ">Bộ Nội Vụ</option>
+                                    <option value="QUOCHOI" title="Quốc Hội">Quốc Hội</option>
+                                    <option value="SONOIVU" title="Sở Nội Vụ">Sở Nội Vụ</option>
+                                    <option value="BOTTIN" title="Bộ Thông tin Truyền thông">Bộ Thông tin Truyền thông</option>
+                                    <option value="HDNDTINH" title="HĐND tỉnh Quảng Nam">HĐND tỉnh Quảng Nam</option>
+                                    <option value="BOKHCN" title="Bộ Khoa học Công nghệ">Bộ Khoa học Công nghệ</option>
+                                    <option value="BOKHDT" title="Bộ Kế hoạch và Đầu tư">Bộ Kế hoạch và Đầu tư</option>
+                                    <option value="VPCP" title="Văn phòng Chính phủ">Văn phòng Chính phủ</option>
+                                    <option value="BOTC" title="Bộ Tài chính">Bộ Tài chính</option>
+                                    <option value="BOYTE" title="Bộ Y tế">Bộ Y tế</option>
+                                    <option value="HDND" title="Hội đồng nhân dân">Hội đồng nhân dân</option>
+                                    <option value="BCDCOVID19" title="Ban chỉ đạo cấp tỉnh phòng, chống dịch Covid -19">Ban chỉ đạo cấp tỉnh phòng, chống dịch Covid -19</option>
+                                    <option value="TINHUY" title="Tỉnh Ủy Quảng Nam">Tỉnh Ủy Quảng Nam</option>
+                                    <option value="BCDCCHC" title="Ban chỉ đạo CCHC tỉnh">Ban chỉ đạo CCHC tỉnh</option>
+                                    <option value="CQLTT" title="Cục Quản lý thị trường tỉnh Quảng Nam">Cục Quản lý thị trường tỉnh Quảng Nam</option>
+                                    <option value="SOTT" title="Sở Thông tin &amp; Truyền thông">Sở Thông tin &amp; Truyền thông</option>
+                                    <option value="KHAC" title="Khác">Khác</option>
+                                  </select>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr class="xm6">
+                              <td class="x15 x4z">
+                                <label for="trang_thai" class="">Trạng thái</label>
+                              </td>
+                              <td valign="top" class="xm8 xm7">
+                                <span class="x1u" id="trang_thai">
+                                  <select id="trang_thai" class="x2h x25 w-100" title="-- Chọn tất cả" _afov="">
+                                    <option value="" title="-- Chọn tất cả">-- Chọn tất cả</option>
+                                    <option value="1" title="Đang còn hiệu lực">Đang còn hiệu lực</option>
+                                    <option value="2" title="Hết hiệu lực">Hết hiệu lực</option>
+                                  </select>
+                                </span>
+                              </td>
+                            </tr>
+                            <div class="x19">
+                              <table cellpadding="0" cellspacing="0" border="0" summary="" role="presentation" style="width: 100%">
+                                <tbody>
+                                  <tr>
+                                    <td class="x4w" colspan="1" width="50%">
+                                      <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" role="presentation">
+                                        <tbody>
+                                          <tr>
+                                            <td style="width: 40.0%"></td>
+                                            <td style="width: 60.0%"></td>
+                                          </tr>
+                                          <tr class="xm6" id="T:dclay:oc_1475903592r_VcKg1:plam_from">
+                                            <td class="x15 x4z"><label class="af_panelLabelAndMessage_label-text" for="">Ban hành từ ngày</label></td>
+                                            <td valign="top" class="xm8 xm7">
+                                              <span id="" class="x1q">
+                                                <input type="date" class="x2b w-100" placeholder="dd/mm/yyyy" data-afr-adffdow="1" data-afr-adftdy>
+                                              </span>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                    <td class="x4w" colspan="1">
+                                      <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" role="presentation">
+                                        <tbody>
+                                          <tr>
+                                            <td style="width: 40.0%"></td>
+                                            <td style="width: 60.0%"></td>
+                                          </tr>
+                                          <tr class="xm6" id="T:dclay:oc_1475903592r_VcKg1:plam_to">
+                                            <td class="x15 x4z"><label class="af_panelLabelAndMessage_label-text" for="">tới ngày</label></td>
+                                            <td valign="top" class="xm8 xm7">
+                                              <span id="" class="x1q">
+                                                <input type="date" class="x2b w-100" placeholder="dd/mm/yyyy" data-afr-adffdow="1" data-afr-adftdy>
+                                              </span>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td class="x4w" colspan="2">
+                                      <table cellpadding="0" cellspacing="0" border="0" width="100%" summary="" role="presentation">
+                                        <tbody>
+                                          <tr>
+                                            <td style="width: 20.0%"></td>
+                                            <td style="width: 80.0%"></td>
+                                          </tr>
+                                          <tr>
+                                            <td></td>
+                                            <td class="x51">
+                                              <div id="T:dclay:oc_1475903592r_VcKg1:b_search" class="xfa p_AFTextOnly" _afrgrp="0" role="presentation">
+                                                <a href="#" onclick="this.focus();return false" data-afr-fcs="true" class="xp3" role="button">
+                                                  <span class="xpa">Tìm kiếm</span>
+                                                </a>
+                                              </div>
+                                              <div id="T:dclay:oc_1475903592r_VcKg1:b_reset" class="xfa p_AFTextOnly" _afrgrp="0" role="presentation"><a href="#" onclick="this.focus();return false" data-afr-fcs="true" class="xp3" role="button"><span class="xpa">Làm lại</span></a></div>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="my-3">Tìm thấy&nbsp;233&nbsp;văn bản thoả mãn điều kiện tìm kiếm.</div>
+                <div class="list-document">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Số ký hiệu</th>
+                          <th>Ngày ban hành</th>
+                          <th>Trích yếu</th>
+                          <th>Trạng thái</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>49-00005-01</td>
+                          <td>26/07/2023</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Cấp giấy phép thành lập Văn phòng đại diện của thương nhân nước ngoài - Công ty Karma Developments PTE. LTD</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#&amp;download=true">49-00005-01.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                        <tr>
+                          <td>93/NQ-CP</td>
+                          <td>05/07/2023</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Nghị quyết về nâng cao hiệu quả hội nhập kinh tế quốc tế, thúc đẩy kinh tế phát triển nhanh và bên vững giai đoạn 2023-2030</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#&amp;download=true">93/NQ-CP.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                        <tr>
+                          <td>1121/HD-SCT</td>
+                          <td>26/06/2023</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Hướng dẫn mô hình chợ thí điểm bảo đảm an toàn thực phẩm</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#&amp;download=true">1121/HD-SCT.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                        <tr>
+                          <td>448/SCT-QLTM</td>
+                          <td>10/03/2023</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Hỗ trợ kết nối tiêu thụ sản phẩm OCOP tỉnh Quảng Nam</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#/">448/SCT-QLTM.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                        <tr>
+                          <td>15/GCNĐĐK-SCT</td>
+                          <td>06/02/2023</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Giấy chứng nhận cửa hàng đủ điều kiện bán lẻ xăng dầu - Cửa hàng xăng dầu Chợ Được</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#&amp;download=true">15/GCNĐĐK-SCT.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                        <tr>
+                          <td>70/SCT-QLTM</td>
+                          <td>12/01/2023</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Xác nhận đăng ký thực hiện khuyến mại - Công ty Cổ phẩn Quảng cáo và Thương mại Blue Sun</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#&amp;download=true">70/SCT-QLTM.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                        <tr>
+                          <td>126/GCNĐĐK-SCT</td>
+                          <td>28/12/2022</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Giấy chứng nhận cửa hàng đủ điều kiện bán lẻ xăng dầu - Cửa hàng xăng dầu Sơn Lộc</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#&amp;download=true">126/GCNĐĐK-SCT.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                        <tr>
+                          <td>123/GCNĐĐK-SCT</td>
+                          <td>28/12/2022</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Giấy chứng nhận cửa hàng đủ điều kiện bán lẻ xăng dầu - Cửa hàng xăng dầu Cẩm Lý</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#&amp;download=true">123/GCNĐĐK-SCT.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                        <tr>
+                          <td>122/GCNĐĐK-SCT</td>
+                          <td>28/12/2022</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Giấy chứng nhận cửa hàng đủ điều kiện bán lẻ xăng dầu - Cửa hàng xăng dầu Hương An II</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#&amp;download=true">122/GCNĐĐK-SCT.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                        <tr>
+                          <td>124/GCNĐĐK-SCT</td>
+                          <td>28/12/2022</td>
+                          <td>
+                            <div class="name_document">
+                              <a href="#">Giấy chứng nhận cửa hàng đủ điều kiện bán lẻ xăng dầu - Cửa hàng xăng dầu Hoàn Thạch</a>
+                              <div class="text_right">
+                                <a class="link-pdf" href="#&amp;download=true">124/GCNĐĐK-SCT.pdf</a>
+                              </div>
+                            </div>
+                          </td>
+                          <td>Đang có hiệu lực</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <nav aria-label="Page navigation example" class="mt-2">
+                    <ul class="pagination justify-content-center flex-wrap mb-0">
+                      <li class="page-item disabled">
+                        <a class="page-link" href="?field=TM">&lt;&lt;</a>
+                      </li>
+                      <li class="page-item active">
+                        <a class="page-link" href="javascript:void(0);">1</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="?field=TM&amp;page=2">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="?field=TM&amp;page=3">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="?field=TM&amp;page=4">4</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="?field=TM&amp;page=5">5</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="page-link" href="?field=TM&amp;page=24">&gt;&gt;</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="right_post col-lg-3">
+          <div class="sidebar_post row">
+            <div class="col-md-6 col-lg-12">
+              <div class="speaker__infor">
+                <div class="heading_speaker">
+                  <h3>Thông tin người phát ngôn</h3>
+                </div>
+                <div class="body_speaker">
+                  <div class="item-infor">
+                    <span>Họ và tên:</span>
+                    Đặng Bá Dự
+                  </div>
+                  <div class="item-infor">
+                    <span>Chức vụ:</span>
+                    Giám đốc
+                  </div>
+                  <div class="item-infor">
+                    <span>Số điện thoại:</span>
+                    0905666999 (02353852641)
+                  </div>
+                  <div class="item-infor">
+                    <span>Email:</span>
+                    dudb@quangnam.gov.vn
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-12">
+              <div class="banner__images">
+                <a href="">
+                  <img src="../public/app/assets/images/post_categories/image_banner_1.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../public/app/assets/images/post_categories/image_banner_2.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../public/app/assets/images/post_categories/image_banner_3.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../public/app/assets/images/post_categories/image_banner_4.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../public/app/assets/images/post_categories/image_banner_5.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../public/app/assets/images/post_categories/image_banner_6.png" alt="">
+                </a>
+                <a href="">
+                  <img src="../public/app/assets/images/post_categories/image_banner_7.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar_support">
+            <div class="heading_support">
+              <h3>Hỗ trợ trực tuyến</h3>
+            </div>
+            <div class="body_support">
+              <div class="item_support">
+                Bộ phận tiếp nhận và trả kết quả:
+                <span>Hoàng Thị Kim Oanh</span>
+              </div>
+              <div class="item_support">
+                Số điện thoại:
+                <span>(0235).3.815.806</span>
+              </div>
+            </div>
+          </div>
+          <div class="sidebar_need_know">
+            <div class="heading_need_know">
+              <h3>Hỗ trợ trực tuyến</h3>
+            </div>
+            <div class="body_need_know">
+              <ul>
+                <li><a href="">Tỷ giá ngoại lệ</a></li>
+                <li><a href="">Giá cả thị trường</a></li>
+                <li><a href="">Du lịch Quảng Nam</a></li>
+                <li><a href="">Lịch cắt điện</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar_link_web">
+            <div class="heading_link_web">
+              <h3>Hỗ trợ trực tuyến</h3>
+            </div>
+            <div class="body_link_web">
+              <select name="" id="">
+                <option value="">Bộ Công Thương</option>
+
+                <option value="">Báo Quảng Nam</option>
+
+                <option value="">Bưu điện Quảng Nam</option>
+
+                <option value="">Bộ Thư Pháp</option>
+
+                <option value="">Sở Ngoại vụ</option>
+
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="row ms-0 me-0">
+        <div class="footer__header">
+          <div class="footer__header__link">
+            <a href="#">Trang chủ</a>
+            <span>|</span>
+            <a href="#">Giới thiệu</a>
+          </div>
+        </div>
+        <div class="footer__body">
+          <div class="row">
+            <div class="footer_left col-md-9">
+              <div class="copyright">
+                <b>Portal Sở Công Thương Quảng Nam</b>
+                <br>
+                <b>Đơn vị quản lý:&nbsp;</b>
+                <span>Sở Công Thương tỉnh Quảng Nam</span>
+                <br>
+                <b>Chịu trách nhiệm chính:&nbsp;</b>
+                <span>Đặng Bá Dự - Giám đốc Sở</span>
+                <br>
+                <b>Điện thoại:&nbsp;</b>
+                <span>(0235).3852 641 -</span>
+                <b>&nbsp;Fax:&nbsp;</b>
+                <span>(0235).3859130 -</span>
+                <b>&nbsp;Email:&nbsp;</b>
+                <span>socongthuongqnam@gmail.com - sct@quangnam.gov.vn</span>
+                <br>
+                <span>Ghi rõ nguồn congthuong.quangnam.gov.vn khi sử dụng thông tin trên website này.</span>
+                <span>Giấy phép số 02/GP-TTĐT do Sở Thông tin và Truyền thông tỉnh Quảng Nam cấp ngày 21 tháng 4 năm 2020.</span>
+              </div>
+            </div>
+            <div class="footer_right col-md-3">
+              <div class="static-footer text-center">
+
+                <b>Tổng lượt truy cập</b>
+                <h5>225,586</h5>
+                <br>
+                <b>Truy cập trong ngày</b>
+                <h5>16</h5>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../public/app/assets/js/bootstrap.min.js"></script>
+  <script src="../public/app/assets/js/jquery-3.7.1.min.js"></script>
+  <script src="../public/app/assets/js/swiper-bundle.min.js"></script>
+  <script src="https://code.responsivevoice.org/responsivevoice.js?key=7TYEXnKc"></script>
+  <script src="../public/app/assets/js/script.js"></script>
+</body>
+
+</html>
